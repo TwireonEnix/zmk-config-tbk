@@ -1,0 +1,22 @@
+#include "tbk.dtsi"
+
+&kscan0 {
+	compatible = "zmk,kscan-gpio-matrix";
+	
+	col-gpios
+		= <&pro_micro 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&pro_micro 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		;
+
+	row-gpios
+		= <&pro_micro 31 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 29 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 2 GPIO_ACTIVE_HIGH>
+		, <&pro_micro 15 GPIO_ACTIVE_HIGH>
+		;
+};
+
