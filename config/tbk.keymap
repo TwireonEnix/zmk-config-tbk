@@ -13,7 +13,7 @@
     flavor = "tap-preferred";
 };
 
-
+/ {
   macros {
         addSurrounds: addSurrounds {
             compatible = "zmk,behavior-macro";
@@ -112,3 +112,4 @@
             >;
         };
     };
+};
