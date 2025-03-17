@@ -13,6 +13,8 @@
     flavor = "tap-preferred";
 };
 
+&lt { flavor = "balanced"; };
+
 / {
     keymap {
         compatible = "zmk,keymap";
@@ -25,37 +27,37 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z       &kp F             &kp O               &kp U           &kp SLASH   &kp LA(SPACE)
-&kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt SEMI A  &kp SINGLE_QUOTE
-&mt ESCAPE ENTER  &kp W           &kp J           &kp V               &kp D             &kp K            &kp X       &kp H             &kp COLON           &kp COMMA       &kp PERIOD  &kp LA(F4)
-                                                  &kp TAB             &lt 4 SPACE       &kp BACKSPACE    &kp ESCAPE  &lt 2 ENTER       &lt 3 DELETE
+&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B              &kp Z       &kp F             &kp O               &kp U           &kp SLASH       &kp LA(SPACE)
+&kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G              &kp M       &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A  &kp SINGLE_QUOTE
+&mt ESCAPE ENTER  &kp W           &kp J           &kp V               &kp D             &kp K              &kp X       &kp H             &kp COLON           &kp COMMA       &kp PERIOD      &kp LA(F4)
+                                                  &kp TAB             &kp SPACE         &lt 4 BACKSPACE    &kp ESCAPE  &lt 2 ENTER       &lt 3 DELETE
             >;
         };
 
         mac {
             bindings = <
-&kp LC(UP_ARROW)  &trans              &trans  &trans          &trans  &trans    &trans  &trans       &trans          &trans  &trans              &kp LG(SPACE)
-&trans            &mt LEFT_CONTROL C  &trans  &mt LEFT_GUI S  &trans  &trans    &trans  &trans       &mt LEFT_GUI E  &trans  &mt LEFT_CONTROL A  &trans
-&trans            &trans              &trans  &trans          &trans  &trans    &trans  &trans       &trans          &trans  &trans              &kp LG(Q)
-                                              &trans          &trans  &trans    &trans  &lt 5 ENTER  &lt 6 DELETE
+&kp LC(UP_ARROW)  &trans              &trans  &trans          &trans       &trans    &trans  &trans       &trans          &trans  &trans              &kp LG(SPACE)
+&trans            &mt LEFT_CONTROL C  &trans  &mt LEFT_GUI S  &trans       &trans    &trans  &trans       &mt LEFT_GUI E  &trans  &mt LEFT_CONTROL A  &trans
+&trans            &trans              &trans  &trans          &trans       &trans    &trans  &trans       &trans          &trans  &trans              &kp LG(Q)
+                                              &trans          &lt 7 SPACE  &trans    &trans  &lt 5 ENTER  &lt 6 DELETE
             >;
         };
 
         sym-win {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&to 1  &trans         &kp UNDERSCORE   &kp MINUS             &kp STAR               &kp AT       &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
+&none  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL    &trans            &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
+&none  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS     &kp SEMICOLON     &kp LESS_THAN   &kp GREATER_THAN  &kp HASH    &kp PIPE           &none
+                                       &trans                &trans                 &trans       &trans            &trans          &trans
             >;
         };
 
         num-win {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&none  &kp KP_DIVIDE  &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &kp KP_PLUS        &kp F12  &kp F7             &kp F8               &kp F9           &none         &none
+&none  &kp LEFT_GUI   &mt LEFT_ALT NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp KP_SUBTRACT    &kp F11  &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &kp LEFT_GUI  &none
+&none  &kp KP_COMMA   &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &kp KP_MULTIPLY    &kp F10  &kp F1             &kp F2               &kp F3           &none         &none
+                                             &kp KP_DOT                 &kp NUMBER_0             &trans             &trans   &trans             &trans
             >;
         };
 
@@ -64,7 +66,7 @@
 &bt BT_CLR_ALL  &trans        &trans          &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans           &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &trans     &trans
 &trans          &kp LEFT_GUI  &kp LALT        &kp LCTRL           &kp LSHFT            &kp LG(LS(S))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
 &bt BT_SEL 0    &bt BT_SEL 1  &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_AC_FORWARD     &trans           &trans      &trans          &kp HOME        &kp END       &trans     &trans
-                                              &trans              &trans               &trans           &caps_word  &trans          &trans
+                                              &trans              &none                &trans           &caps_word  &trans          &trans
             >;
         };
 
