@@ -13,7 +13,30 @@
     flavor = "tap-preferred";
 };
 
-/ {
+
+  macros {
+        addSurrounds: addSurrounds {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp Y &kp Z &kp I &kp W>;
+            label = "ADDSURROUNDS";
+        };
+
+        jsfn: jsfn {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp SPACE &kp EQUAL &kp GREATER_THAN &kp SPACE &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+            label = "JSFN";
+        };
+
+        upDirectory: upDirectory {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD &kp PERIOD &kp SLASH>;
+            label = "UPDIRECTORY";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -89,4 +112,3 @@
             >;
         };
     };
-};
