@@ -44,7 +44,7 @@
             bindings = <
 &kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z       &kp F             &kp O               &kp U           &kp SLASH       &kp LA(SPACE)
 &kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A  &kp SINGLE_QUOTE
-&mt ESCAPE ENTER  &kp W           &kp J           &kp V               &kp D             &kp K            &kp X       &kp H             &kp COLON           &kp COMMA       &kp PERIOD      &kp LA(F4)
+&mt ENTER ESCAPE  &kp W           &kp J           &kp V               &kp D             &kp K            &kp X       &kp H             &kp COLON           &kp COMMA       &kp PERIOD      &kp LA(F4)
                                                   &lt 3 TAB           &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 2 ENTER       &lt 1 DELETE
             >;
         };
