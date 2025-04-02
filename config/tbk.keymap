@@ -35,6 +35,36 @@
             bindings = <&kp PERIOD &kp PERIOD &kp SLASH>;
             label = "UPDIRECTORY";
         };
+
+        toWin: toWin {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 0 &to 0>;
+            label = "TOWIN";
+        };
+
+        toMac: toMac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 4>;
+            label = "TOMAC";
+        };
+    };
+
+    behaviors {
+        toMacTapDance: toMacTapDance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TOMACTAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&to 4>;
+        };
+
+        toWinTapDance: toWinTapDance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TOWINTAPDANCE";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&to 0>;
+        };
     };
 
     keymap {
@@ -42,16 +72,16 @@
 
         win {
             bindings = <
-&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z       &kp F             &kp O               &kp U           &kp SLASH       &kp LA(SPACE)
+&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z       &kp F             &kp O               &kp U           &toMacTapDance  &kp LA(SPACE)
 &kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A  &kp SINGLE_QUOTE
-&mt ENTER ESCAPE  &kp W           &kp J           &kp V               &kp D             &kp K            &kp X       &kp H             &kp COLON           &kp COMMA       &kp PERIOD      &kp LA(F4)
+&mt ENTER ESCAPE  &kp W           &kp J           &mt LC(C) V         &mt LC(V) D       &kp K            &kp X       &kp H             &kp COLON           &kp COMMA       &kp PERIOD      &mt LA(F4) ESCAPE
                                                   &lt 3 TAB           &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 2 ENTER       &lt 1 DELETE
             >;
         };
 
         sym-win {
             bindings = <
-&to 4  &addSurrounds  &kp UNDERSCORE   &kp MINUS             &kp STAR               &kp AT           &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
+&none  &addSurrounds  &kp UNDERSCORE   &kp MINUS             &kp STAR               &kp AT           &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
 &none  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL        &upDirectory      &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
 &none  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS         &kp SEMICOLON     &kp LESS_THAN   &kp GREATER_THAN  &kp HASH    &kp PIPE           &none
                                        &jsfn                 &kp SPACE              &kp BACKSPACE    &trans            &trans          &trans
@@ -71,23 +101,23 @@
             bindings = <
 &bt BT_CLR_ALL  &trans        &kp LS(LG(S))   &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans           &trans              &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &kp LC(NUMBER_8)  &trans
 &bt BT_CLR      &kp LEFT_GUI  &kp LALT        &kp LCTRL           &kp LSHFT            &kp LG(LS(S))    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT         &kp LG(RIGHT)
-&none           &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_AC_FORWARD     &trans           &trans              &trans          &kp HOME        &kp END       &bt BT_SEL 0      &bt BT_SEL 1
+&none           &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_AC_FORWARD     &trans           &trans              &trans          &kp HOME        &kp END       &none             &toMac
                                               &trans              &none                &trans           &caps_word          &kp ENTER       &kp DELETE
             >;
         };
 
         mac {
             bindings = <
-&kp LC(UP_ARROW)  &kp Q               &kp L           &kp Y           &kp P             &kp B            &kp Z       &kp F             &kp O           &kp U           &kp SLASH           &kp LG(SPACE)
+&kp LC(UP_ARROW)  &kp Q               &kp L           &kp Y           &kp P             &kp B            &kp Z       &kp F             &kp O           &kp U           &toWinTapDance      &kp LG(SPACE)
 &kp RIGHT_ALT     &mt LEFT_CONTROL C  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LEFT_CONTROL A  &kp SINGLE_QUOTE
-&mt ESCAPE ENTER  &kp W               &kp J           &kp V           &kp D             &kp K            &kp X       &kp H             &kp COLON       &kp COMMA       &kp PERIOD          &kp LG(Q)
+&mt ESCAPE ENTER  &kp W               &kp J           &mt LG(C) V     &mt LG(V) D       &kp K            &kp X       &kp H             &kp COLON       &kp COMMA       &kp PERIOD          &mt LG(Q) ESCAPE
                                                       &lt 7 TAB       &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 6 ENTER       &lt 5 DELETE
             >;
         };
 
         sym-mac {
             bindings = <
-&to 0  &addSurrounds  &kp UNDERSCORE   &kp MINUS             &kp STAR               &kp AT           &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET         &kp GRAVE          &none
+&none  &addSurrounds  &kp UNDERSCORE   &kp MINUS             &kp STAR               &kp AT           &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET         &kp GRAVE          &none
 &none  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL        &upDirectory      &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR        &kp DOUBLE_QUOTES  &none
 &none  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS         &kp SEMICOLON     &kp LESS_THAN   &kp GREATER_THAN  &kp LA(NUMBER_3)  &kp PIPE           &none
                                        &jsfn                 &kp SPACE              &kp BACKSPACE    &trans            &trans          &trans
@@ -105,9 +135,9 @@
 
         nav-mac {
             bindings = <
-&bt BT_CLR_ALL        &trans                &kp LS(LC(LG(NUMBER_4)))  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans    &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &trans        &trans
-&bt BT_CLR            &kp LEFT_CONTROL      &kp LALT                  &kp LEFT_GUI        &kp LSHFT            &none     &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT     &trans
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS            &kp C_PLAY_PAUSE    &kp C_AC_FORWARD     &trans    &trans      &trans          &kp HOME        &kp END       &bt BT_SEL 0  &bt BT_SEL 1
+&bt BT_CLR_ALL        &trans                &kp LS(LC(LG(NUMBER_4)))  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans    &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &trans     &trans
+&bt BT_CLR            &kp LEFT_CONTROL      &kp LALT                  &kp LEFT_GUI        &kp LSHFT            &none     &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS            &kp C_PLAY_PAUSE    &kp C_AC_FORWARD     &trans    &trans      &trans          &kp HOME        &kp END       &none      &toWin
                                                                       &trans              &none                &trans    &caps_word  &trans          &trans
             >;
         };
