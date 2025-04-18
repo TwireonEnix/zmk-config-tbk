@@ -52,18 +52,14 @@
     };
 
     behaviors {
-        toMacTapDance: toMacTapDance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TOMACTAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&to 4>;
-        };
+        tapKpHoldTO: tapKpHoldTO {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAPKPHOLDTO";
+            bindings = <&to>, <&kp>;
 
-        toWinTapDance: toWinTapDance {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TOWINTAPDANCE";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&to 0>;
+            #binding-cells = <2>;
+            tapping-term-ms = <220>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -72,9 +68,9 @@
 
         win {
             bindings = <
-&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z       &kp F             &kp O               &kp U           &toMacTapDance  &kp LA(SPACE)
-&kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A  &kp SINGLE_QUOTE
-&mt ENTER ESCAPE  &kp W           &kp J           &mt LC(C) V         &mt LC(V) D       &kp K            &kp X       &kp H             &kp COLON           &kp COMMA       &kp PERIOD      &mt LA(F4) ESCAPE
+&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z       &kp F             &kp O               &kp U           &tapKpHoldTO 4 SLASH  &kp LA(SPACE)
+&kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A        &kp SINGLE_QUOTE
+&mt ENTER ESCAPE  &kp W           &kp J           &mt LC(C) V         &mt LC(V) D       &kp K            &kp X       &kp H             &kp COLON           &kp COMMA       &kp PERIOD            &mt LA(F4) ESCAPE
                                                   &lt 3 TAB           &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 2 ENTER       &lt 1 DELETE
             >;
         };
@@ -108,9 +104,9 @@
 
         mac {
             bindings = <
-&kp LC(UP_ARROW)  &kp Q               &kp L           &kp Y           &kp P             &kp B            &kp Z       &kp F             &kp O           &kp U           &toWinTapDance      &kp LG(SPACE)
-&kp RIGHT_ALT     &mt LEFT_CONTROL C  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LEFT_CONTROL A  &kp SINGLE_QUOTE
-&mt ESCAPE ENTER  &kp W               &kp J           &mt LG(C) V     &mt LG(V) D       &kp K            &kp X       &kp H             &kp COLON       &kp COMMA       &kp PERIOD          &mt LG(Q) ESCAPE
+&kp LC(UP_ARROW)  &kp Q               &kp L           &kp Y           &kp P             &kp B            &kp Z       &kp F             &kp O           &kp U           &tapKpHoldTO 0 SLASH  &kp LG(SPACE)
+&kp RIGHT_ALT     &mt LEFT_CONTROL C  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LEFT_CONTROL A    &kp SINGLE_QUOTE
+&mt ESCAPE ENTER  &kp W               &kp J           &mt LG(C) V     &mt LG(V) D       &kp K            &kp X       &kp H             &kp COLON       &kp COMMA       &kp PERIOD            &mt LG(Q) ESCAPE
                                                       &lt 7 TAB       &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 6 ENTER       &lt 5 DELETE
             >;
         };
