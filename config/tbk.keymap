@@ -95,10 +95,10 @@
 
         nav-win {
             bindings = <
-&bt BT_CLR_ALL  &trans        &kp LS(LG(S))   &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans           &trans              &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &kp LC(NUMBER_8)  &trans
-&bt BT_CLR      &kp LEFT_GUI  &kp LALT        &kp LCTRL           &kp LSHFT            &kp LG(LS(S))    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT         &kp LG(RIGHT)
-&none           &none         &kp C_PREVIOUS  &kp C_PLAY_PAUSE    &kp C_AC_FORWARD     &trans           &trans              &trans          &kp HOME        &kp END       &none             &toMac
-                                              &trans              &none                &trans           &caps_word          &kp ENTER       &kp DELETE
+&bt BT_CLR_ALL     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP   &trans           &trans              &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &kp LC(NUMBER_8)  &trans
+&bt BT_CLR         &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT         &kp LG(LS(S))    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT         &kp LG(RIGHT)
+&kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &kp C_PREVIOUS       &kp C_PLAY_PAUSE  &kp C_AC_FORWARD  &trans           &trans              &trans          &kp HOME        &kp END       &none             &toMac
+                                                            &trans            &none             &trans           &caps_word          &kp ENTER       &kp DELETE
             >;
         };
 
@@ -131,10 +131,10 @@
 
         nav-mac {
             bindings = <
-&bt BT_CLR_ALL        &trans                &kp LS(LC(LG(NUMBER_4)))  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &trans    &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &trans     &trans
-&bt BT_CLR            &kp LEFT_CONTROL      &kp LALT                  &kp LEFT_GUI        &kp LSHFT            &none     &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS            &kp C_PLAY_PAUSE    &kp C_AC_FORWARD     &trans    &trans      &trans          &kp HOME        &kp END       &none      &toWin
-                                                                      &trans              &none                &trans    &caps_word  &trans          &trans
+&bt BT_CLR_ALL        &kp LA(LEFT)          &kp LA(RIGHT_ARROW)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans                      &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &trans     &trans
+&bt BT_CLR            &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT         &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS       &kp C_PLAY_PAUSE   &kp C_AC_FORWARD  &trans                      &trans      &trans          &kp HOME        &kp END       &none      &toWin
+                                                                 &trans             &none             &trans                      &caps_word  &trans          &trans
             >;
         };
     };
