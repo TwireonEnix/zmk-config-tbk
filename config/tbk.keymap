@@ -86,19 +86,19 @@
 
         num-win {
             bindings = <
-&none  &kp KP_DIVIDE  &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &kp KP_PLUS        &kp F12  &kp F7             &kp F8               &kp F9           &none         &none
-&none  &kp LEFT_GUI   &mt LEFT_ALT NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp KP_SUBTRACT    &kp F11  &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &kp LEFT_GUI  &none
-&none  &kp KP_COMMA   &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &kp KP_MULTIPLY    &kp F10  &kp F1             &kp F2               &kp F3           &none         &none
-                                             &kp KP_DOT                 &kp NUMBER_0             &kp BACKSPACE      &trans   &trans             &trans
+&none  &none         &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &kp KP_PLUS        &kp F12  &kp F7             &kp F8               &kp F9           &none         &none
+&none  &kp LEFT_GUI  &mt LEFT_ALT NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp KP_SUBTRACT    &kp F11  &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &kp LEFT_GUI  &none
+&none  &kp KP_COMMA  &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &kp KP_MULTIPLY    &kp F10  &kp F1             &kp F2               &kp F3           &kp KP_DOT    &none
+                                            &kp KP_DIVIDE              &kp NUMBER_0             &kp BACKSPACE      &trans   &trans             &trans
             >;
         };
 
         nav-win {
             bindings = <
-&bt BT_CLR_ALL     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP   &trans           &trans              &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &kp LC(NUMBER_8)  &trans
-&bt BT_CLR         &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT         &kp LG(LS(S))    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT         &kp LG(RIGHT)
-&kp C_VOLUME_DOWN  &kp C_VOLUME_UP     &kp C_PREVIOUS       &kp C_PLAY_PAUSE  &kp C_AC_FORWARD  &trans           &trans              &trans          &kp HOME        &kp END       &none             &toMac
-                                                            &trans            &none             &trans           &caps_word          &kp ENTER       &kp DELETE
+&bt BT_CLR  &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP  &trans           &trans              &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &kp LC(NUMBER_8)  &bt BT_CLR_ALL
+&none       &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT        &kp LG(LS(S))    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT         &kp LG(RIGHT)
+&none       &none               &kp K_PREVIOUS       &kp K_PLAY_PAUSE  &kp K_FORWARD    &trans           &trans              &trans          &kp HOME        &kp END       &none             &toMac
+                                                     &trans            &none            &none            &caps_word          &kp ENTER       &kp DELETE
             >;
         };
 
@@ -122,19 +122,19 @@
 
         num-mac {
             bindings = <
-&none  &kp KP_DIVIDE     &kp NUMBER_7           &kp NUMBER_8           &kp NUMBER_9             &kp KP_PLUS        &kp F12  &kp F7             &kp F8           &kp F9           &none             &none
+&none  &none             &kp NUMBER_7           &kp NUMBER_8           &kp NUMBER_9             &kp KP_PLUS        &kp F12  &kp F7             &kp F8           &kp F9           &none             &none
 &none  &kp LEFT_CONTROL  &mt LEFT_ALT NUMBER_4  &mt LEFT_GUI NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp KP_SUBTRACT    &kp F11  &mt LEFT_SHIFT F4  &mt LEFT_GUI F5  &mt LEFT_ALT F6  &kp LEFT_CONTROL  &none
-&none  &kp KP_COMMA      &kp NUMBER_1           &kp NUMBER_2           &kp NUMBER_3             &kp KP_MULTIPLY    &kp F10  &kp F1             &kp F2           &kp F3           &none             &none
-                                                &kp KP_DOT             &kp NUMBER_0             &trans             &trans   &trans             &trans
+&none  &kp KP_COMMA      &kp NUMBER_1           &kp NUMBER_2           &kp NUMBER_3             &kp KP_MULTIPLY    &kp F10  &kp F1             &kp F2           &kp F3           &kp KP_DOT        &none
+                                                &kp KP_DIVIDE          &kp NUMBER_0             &kp BACKSPACE      &trans   &trans             &trans
             >;
         };
 
         nav-mac {
             bindings = <
-&bt BT_CLR_ALL        &kp LA(LEFT)          &kp LA(RIGHT_ARROW)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP   &trans                      &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &trans     &trans
-&bt BT_CLR            &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT         &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS       &kp C_PLAY_PAUSE   &kp C_AC_FORWARD  &trans                      &trans      &trans          &kp HOME        &kp END       &none      &toWin
-                                                                 &trans             &none             &trans                      &caps_word  &trans          &trans
+&bt BT_CLR            &kp LA(LEFT)          &kp LA(RIGHT_ARROW)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                      &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &trans     &bt BT_CLR_ALL
+&none                 &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT        &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_PREVIOUS       &kp K_PLAY_PAUSE   &kp K_FORWARD    &trans                      &trans      &trans          &kp HOME        &kp END       &none      &toWin
+                                                                 &trans             &none            &none                       &caps_word  &trans          &trans
             >;
         };
     };
