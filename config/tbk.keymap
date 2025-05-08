@@ -77,9 +77,9 @@
 
         sym-win {
             bindings = <
-&none  &addSurrounds  &kp UNDERSCORE   &kp MINUS             &kp STAR               &kp AT           &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
-&none  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL        &upDirectory      &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
-&none  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS         &kp SEMICOLON     &kp LESS_THAN   &kp GREATER_THAN  &kp HASH    &kp PIPE           &none
+&none  &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
+&none  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp SEMICOLON     &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
+&none  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &upDirectory      &kp LESS_THAN   &kp GREATER_THAN  &kp HASH    &kp PIPE           &none
                                        &jsfn                 &kp SPACE              &kp BACKSPACE    &bt BT_SEL 0      &bt BT_SEL 1    &trans
             >;
         };
@@ -113,9 +113,9 @@
 
         sym-mac {
             bindings = <
-&none  &addSurrounds  &kp UNDERSCORE   &kp MINUS             &kp STAR               &kp AT           &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET         &kp GRAVE          &none
-&none  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL        &upDirectory      &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR        &kp DOUBLE_QUOTES  &none
-&none  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp PLUS         &kp SEMICOLON     &kp LESS_THAN   &kp GREATER_THAN  &kp LA(NUMBER_3)  &kp PIPE           &none
+&none  &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET         &kp GRAVE          &none
+&none  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp SEMI          &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR        &kp DOUBLE_QUOTES  &none
+&none  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp ASTRK        &upDirectory      &kp LESS_THAN   &kp GREATER_THAN  &kp LA(NUMBER_3)  &kp PIPE           &none
                                        &jsfn                 &kp SPACE              &kp BACKSPACE    &bt BT_SEL 0      &bt BT_SEL 1    &trans
             >;
         };
