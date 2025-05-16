@@ -75,7 +75,7 @@
             >;
         };
 
-        sym-win {
+        symb {
             bindings = <
 &none  &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp LA(DOUBLE_QUOTES)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
 &none  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp POUND              &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
@@ -107,16 +107,7 @@
 &kp LC(UP_ARROW)  &kp Q               &kp L           &kp Y           &kp P             &kp B            &kp Z       &kp F             &kp O           &kp U           &tapKpHoldTO 0 SLASH  &kp LG(SPACE)
 &kp RIGHT_ALT     &mt LEFT_CONTROL C  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LEFT_CONTROL A    &kp SINGLE_QUOTE
 &mt ESCAPE ENTER  &kp W               &kp J           &mt LG(C) V     &mt LG(V) D       &kp K            &kp X       &kp H             &kp COLON       &kp COMMA       &kp PERIOD            &mt LG(Q) ESCAPE
-                                                      &lt 7 TAB       &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 6 ENTER       &lt 5 DELETE
-            >;
-        };
-
-        sym-mac {
-            bindings = <
-&none  &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp LA(NUMBER_8)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
-&none  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp LA(NUMBER_3)  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
-&none  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp ASTRK        &upDirectory      &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp PIPE           &none
-                                       &jsfn                 &kp SPACE              &kp BACKSPACE    &bt BT_SEL 0      &bt BT_SEL 1    &trans
+                                                      &lt 6 TAB       &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 5 ENTER       &lt 1 DELETE
             >;
         };
 
