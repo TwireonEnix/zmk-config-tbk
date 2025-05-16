@@ -46,7 +46,7 @@
         toMac: toMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 4>;
+            bindings = <&bt BT_SEL 1 &to 1>;
             label = "TOMAC";
         };
     };
@@ -68,19 +68,19 @@
 
         win {
             bindings = <
-&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z       &kp F             &kp O               &kp U           &tapKpHoldTO 4 SLASH  &kp LA(SPACE)
+&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z       &kp F             &kp O               &kp U           &tapKpHoldTO 1 SLASH  &kp LA(SPACE)
 &kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A        &kp SINGLE_QUOTE
 &mt ENTER ESCAPE  &kp W           &kp J           &mt LC(C) V         &mt LC(V) D       &kp K            &kp X       &kp H             &kp COLON           &kp COMMA       &kp PERIOD            &mt LA(F4) ESCAPE
-                                                  &lt 3 TAB           &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 2 ENTER       &lt 1 DELETE
+                                                  &lt 3 TAB           &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 2 ENTER       &lt 6 DELETE
             >;
         };
 
-        symbols {
+        mac {
             bindings = <
-&none             &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp RA(NUMBER_5)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
-&kp RA(SLASH)     &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp POUND         &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
-&kp RA(NUMBER_1)  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &upDirectory      &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp PIPE           &none
-                                                  &jsfn                 &kp SPACE              &kp BACKSPACE    &bt BT_SEL 0      &bt BT_SEL 1    &trans
+&kp LC(UP_ARROW)  &kp Q               &kp L           &kp Y           &kp P             &kp B            &kp Z       &kp F             &kp O           &kp U           &tapKpHoldTO 0 SLASH  &kp LG(SPACE)
+&kp RIGHT_ALT     &mt LEFT_CONTROL C  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LEFT_CONTROL A    &kp SINGLE_QUOTE
+&mt ESCAPE ENTER  &kp W               &kp J           &mt LG(C) V     &mt LG(V) D       &kp K            &kp X       &kp H             &kp COLON       &kp COMMA       &kp PERIOD            &mt LG(Q) ESCAPE
+                                                      &lt 5 TAB       &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 4 ENTER       &lt 6 DELETE
             >;
         };
 
@@ -102,15 +102,6 @@
             >;
         };
 
-        mac {
-            bindings = <
-&kp LC(UP_ARROW)  &kp Q               &kp L           &kp Y           &kp P             &kp B            &kp Z       &kp F             &kp O           &kp U           &tapKpHoldTO 0 SLASH  &kp LG(SPACE)
-&kp RIGHT_ALT     &mt LEFT_CONTROL C  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G            &kp M       &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LEFT_CONTROL A    &kp SINGLE_QUOTE
-&mt ESCAPE ENTER  &kp W               &kp J           &mt LG(C) V     &mt LG(V) D       &kp K            &kp X       &kp H             &kp COLON       &kp COMMA       &kp PERIOD            &mt LG(Q) ESCAPE
-                                                      &lt 6 TAB       &kp SPACE         &kp BACKSPACE    &kp ESCAPE  &lt 5 ENTER       &lt 1 DELETE
-            >;
-        };
-
         num-mac {
             bindings = <
 &none  &none             &kp NUMBER_7           &kp NUMBER_8           &kp NUMBER_9             &kp PLUS         &kp F12     &kp F7             &kp F8           &kp F9           &kp SLASH         &none
@@ -126,6 +117,15 @@
 &none                 &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT        &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_PREVIOUS       &kp K_PLAY_PAUSE   &kp K_FORWARD    &trans                      &trans      &trans          &kp HOME        &kp END       &none      &toWin
                                                                  &trans             &none            &bt BT_CLR_ALL              &caps_word  &trans          &trans
+            >;
+        };
+
+        symbols {
+            bindings = <
+&none             &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp RA(NUMBER_5)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
+&kp RA(SLASH)     &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp POUND         &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
+&kp RA(NUMBER_1)  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &upDirectory      &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp PIPE           &none
+                                                  &jsfn                 &kp SPACE              &kp BACKSPACE    &bt BT_SEL 0      &bt BT_SEL 1    &trans
             >;
         };
     };
