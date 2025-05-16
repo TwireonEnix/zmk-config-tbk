@@ -77,10 +77,10 @@
 
         symbols {
             bindings = <
-&none             &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &none         &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
-&kp RA(QUESTION)  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp POUND     &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
-&kp LA(EXCL)      &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &upDirectory  &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp PIPE           &none
-                                                  &jsfn                 &kp SPACE              &kp BACKSPACE    &bt BT_SEL 0  &bt BT_SEL 1    &trans
+&none             &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp RA(NUMBER_5)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
+&kp RA(QUESTION)  &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp POUND         &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
+&kp LA(EXCL)      &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &upDirectory      &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp PIPE           &none
+                                                  &jsfn                 &kp SPACE              &kp BACKSPACE    &bt BT_SEL 0      &bt BT_SEL 1    &trans
             >;
         };
 
