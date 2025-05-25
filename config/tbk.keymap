@@ -132,10 +132,10 @@
 
         symbols {
             bindings = <
-&none                              &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp RA(NUMBER_5)  &kp AMPERSAND   &kp PERCENT       &kp CARET   &kp GRAVE          &none
-&kp RA(SLASH)                      &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp POUND         &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
-&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &upDirectory      &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp PIPE           &none
-                                                                   &jsfn                 &kp SPACE              &kp BACKSPACE    &trans            &bt BT_NXT      &trans
+&none                              &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp PIPE   &kp AMPERSAND   &kp PERCENT       &kp CARET   &upDirectory       &none
+&kp RA(SLASH)                      &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
+&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &kp HASH   &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp RA(N5)         &none
+                                                                   &jsfn                 &kp SPACE              &kp BACKSPACE    &trans     &bt BT_NXT      &trans
             >;
         };
     };
