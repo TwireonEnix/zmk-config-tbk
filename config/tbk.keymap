@@ -98,33 +98,33 @@
             bindings = <
 &none     &none         &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &kp PLUS         &kp F12     &kp F7             &kp F8               &kp F9           &kp SLASH     &none
 &kp RALT  &kp LEFT_GUI  &mt LEFT_ALT NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
-&none     &kp COMMA     &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &kp STAR         &kp F10     &kp F1             &kp F2               &kp F3           &kp DOT       &none
+&none     &kp COMMA     &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &kp STAR         &kp F10     &kp F1             &kp F2               &kp F3           &kp DOT       &kp DELETE
                                                &kp SPACE                  &kp NUMBER_0             &kp BACKSPACE    &kp ESCAPE  &kp ENTER          &kp DELETE
             >;
         };
 
         nav-win {
             bindings = <
-&none     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP  &trans            &trans              &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &kp LC(NUMBER_8)  &none
-&kp RALT  &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT        &kp LG(LS(S))     &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT         &kp LG(RIGHT)
-&none     &none               &kp K_PREVIOUS       &kp K_PLAY_PAUSE  &kp K_FORWARD    &kp LS(TAB)       &trans              &trans          &kp HOME        &kp END       &none             &toMac
+&none     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP  &none             &none               &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
+&kp RALT  &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT        &kp LG(LS(S))     &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp LG(RIGHT)
+&none     &none               &kp K_PREVIOUS       &kp K_PLAY_PAUSE  &kp K_FORWARD    &kp LS(TAB)       &none               &none           &kp HOME        &kp END       &none      &toMac
                                                    &trans            &none            &bt BT_CLR_ALL    &caps_word          &kp ENTER       &kp DELETE
             >;
         };
 
         num-mac {
             bindings = <
-&none  &none             &kp NUMBER_7           &kp NUMBER_8           &kp NUMBER_9             &kp PLUS         &kp F12     &kp F7             &kp F8           &kp F9           &kp SLASH         &none
-&none  &kp LEFT_CONTROL  &mt LEFT_ALT NUMBER_4  &mt LEFT_GUI NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &mt LEFT_SHIFT F4  &mt LEFT_GUI F5  &mt LEFT_ALT F6  &kp LEFT_CONTROL  &none
-&none  &kp COMMA         &kp NUMBER_1           &kp NUMBER_2           &kp NUMBER_3             &kp ASTRK        &kp F10     &kp F1             &kp F2           &kp F3           &kp PERIOD        &none
-                                                &kp SPACE              &kp NUMBER_0             &kp BACKSPACE    &kp ESCAPE  &kp ENTER          &kp DELETE
+&none     &none             &kp NUMBER_7           &kp NUMBER_8           &kp NUMBER_9             &kp PLUS         &kp F12     &kp F7             &kp F8           &kp F9           &kp SLASH         &none
+&kp RALT  &kp LEFT_CONTROL  &mt LEFT_ALT NUMBER_4  &mt LEFT_GUI NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11     &mt LEFT_SHIFT F4  &mt LEFT_GUI F5  &mt LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
+&none     &kp COMMA         &kp NUMBER_1           &kp NUMBER_2           &kp NUMBER_3             &kp ASTRK        &kp F10     &kp F1             &kp F2           &kp F3           &kp PERIOD        &kp DELETE
+                                                   &kp SPACE              &kp NUMBER_0             &kp BACKSPACE    &kp ESCAPE  &kp ENTER          &kp DELETE
             >;
         };
 
         nav-mac {
             bindings = <
-&none                 &kp LA(LEFT)          &kp LA(RIGHT_ARROW)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                      &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &trans     &none
-&none                 &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT        &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans
+&none                 &kp LA(LEFT)          &kp LA(RIGHT_ARROW)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                      &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
+&none                 &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT        &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none
 &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_PREVIOUS       &kp K_PLAY_PAUSE   &kp K_FORWARD    &trans                      &trans      &trans          &kp HOME        &kp END       &none      &toWin
                                                                  &trans             &none            &bt BT_CLR_ALL              &caps_word  &trans          &trans
             >;
