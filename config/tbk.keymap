@@ -81,7 +81,7 @@
 &kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z         &kp F             &kp O               &kp U           &tapKpHoldToMac 1 SLASH  &kp LA(SPACE)
 &kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M         &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A           &kp SINGLE_QUOTE
 &mt ENTER ESCAPE  &kp W           &kp J           &mt LC(C) V         &mt LC(V) D       &kp K            &kp X         &kp H             &kp COLON           &kp COMMA       &kp PERIOD               &mt LA(F4) DELETE
-                                                  &lt 3 TAB           &kp SPACE         &kp BACKSPACE    &lt 6 ESCAPE  &lt 2 ENTER       &kp DELETE
+                                                  &lt 3 TAB           &kp SPACE         &kp BACKSPACE    &lt 2 ESCAPE  &lt 6 ENTER       &kp DELETE
             >;
         };
 
@@ -90,7 +90,7 @@
 &kp LC(UP_ARROW)  &kp Q               &kp L           &kp Y           &kp P             &kp B            &kp Z         &kp F             &kp O           &kp U           &tapKpHoldToWin 0 SLASH  &kp LG(SPACE)
 &kp RIGHT_ALT     &mt LEFT_CONTROL C  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G            &kp M         &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LEFT_CONTROL A       &kp SINGLE_QUOTE
 &mt ESCAPE ENTER  &kp W               &kp J           &mt LG(C) V     &mt LG(V) D       &kp K            &kp X         &kp H             &kp COLON       &kp COMMA       &kp PERIOD               &mt LG(Q) DELETE
-                                                      &lt 5 TAB       &kp SPACE         &kp BACKSPACE    &lt 6 ESCAPE  &lt 4 ENTER       &kp DELETE
+                                                      &lt 5 TAB       &kp SPACE         &kp BACKSPACE    &lt 4 ESCAPE  &lt 6 ENTER       &kp DELETE
             >;
         };
 
