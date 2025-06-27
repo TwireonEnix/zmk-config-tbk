@@ -42,13 +42,6 @@
             bindings = <&bt BT_SEL 0 &to 0>;
             label = "TOWIN";
         };
-
-        toMac: toMac {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &to 1>;
-            label = "TOMAC";
-        };
     };
 
     behaviors {
@@ -71,72 +64,63 @@
             tapping-term-ms = <220>;
             flavor = "tap-preferred";
         };
+
+        layerModTap: layerModTap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LAYERMODTAP";
+            bindings = <&to>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        win {
+        BASE {
             bindings = <
-&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z         &kp F             &kp O               &kp U           &tapKpHoldToMac 1 SLASH  &kp LA(SPACE)
-&kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M         &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A           &kp SINGLE_QUOTE
-&mt ENTER ESCAPE  &kp W           &kp J           &mt LC(C) V         &mt LC(V) D       &kp K            &kp X         &kp H             &kp COLON           &kp COMMA       &kp PERIOD               &mt LA(F4) DELETE
-                                                  &lt 3 TAB           &kp SPACE         &kp BACKSPACE    &lt 2 ESCAPE  &lt 6 ENTER       &kp DELETE
+&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z         &kp F             &kp O               &kp U           &kp SLASH       &kp LA(SPACE)
+&kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M         &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A  &kp SINGLE_QUOTE
+&mt ENTER ESCAPE  &kp W           &kp J           &mt LC(C) V         &mt LC(V) D       &kp K            &kp X         &kp H             &kp COLON           &kp COMMA       &kp PERIOD      &mt LA(F4) DELETE
+                                                  &lt 2 TAB           &kp SPACE         &kp BACKSPACE    &lt 1 ESCAPE  &lt 3 ENTER       &kp DELETE
             >;
+
+            label = "BASE";
         };
 
-        mac {
-            bindings = <
-&kp LC(UP_ARROW)  &kp Q               &kp L           &kp Y           &kp P             &kp B            &kp Z         &kp F             &kp O           &kp U           &tapKpHoldToWin 0 SLASH  &kp LG(SPACE)
-&kp RIGHT_ALT     &mt LEFT_CONTROL C  &mt LEFT_ALT R  &mt LEFT_GUI S  &mt LEFT_SHIFT T  &kp G            &kp M         &mt LEFT_SHIFT N  &mt LEFT_GUI E  &mt LEFT_ALT I  &mt LEFT_CONTROL A       &kp SINGLE_QUOTE
-&mt ESCAPE ENTER  &kp W               &kp J           &mt LG(C) V     &mt LG(V) D       &kp K            &kp X         &kp H             &kp COLON       &kp COMMA       &kp PERIOD               &mt LG(Q) DELETE
-                                                      &lt 5 TAB       &kp SPACE         &kp BACKSPACE    &lt 4 ESCAPE  &lt 6 ENTER       &kp DELETE
-            >;
-        };
-
-        num-win {
+        NUMBERS {
             bindings = <
 &none     &none         &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &kp PLUS         &kp F12  &kp F7             &kp F8               &kp F9           &kp SLASH     &none
 &kp RALT  &kp LEFT_GUI  &mt LEFT_ALT NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11  &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
 &none     &kp COMMA     &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &kp STAR         &kp F10  &kp F1             &kp F2               &kp F3           &kp DOT       &kp DELETE
                                                &kp SPACE                  &kp NUMBER_0             &kp BACKSPACE    &trans   &kp ENTER          &kp DELETE
             >;
+
+            label = "NUM";
         };
 
-        nav-win {
+        NAVIGATION {
             bindings = <
 &none     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP  &none             &none               &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
 &kp RALT  &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT        &kp LG(LS(S))     &kp LG(LEFT_ARROW)  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &kp LG(RIGHT)
-&none     &none               &kp K_PREVIOUS       &kp K_PLAY_PAUSE  &kp K_FORWARD    &kp LS(TAB)       &none               &none           &kp HOME        &kp END       &none      &toMac
+&none     &none               &kp K_PREVIOUS       &kp K_PLAY_PAUSE  &kp K_FORWARD    &kp LS(TAB)       &none               &none           &kp HOME        &kp END       &none      &trans
                                                    &trans            &none            &bt BT_CLR_ALL    &caps_word          &kp ENTER       &kp DELETE
             >;
+
+            label = "NAV";
         };
 
-        num-mac {
-            bindings = <
-&none     &none             &kp NUMBER_7           &kp NUMBER_8           &kp NUMBER_9             &kp PLUS         &kp F12  &kp F7             &kp F8           &kp F9           &kp SLASH         &none
-&kp RALT  &kp LEFT_CONTROL  &mt LEFT_ALT NUMBER_4  &mt LEFT_GUI NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11  &mt LEFT_SHIFT F4  &mt LEFT_GUI F5  &mt LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
-&none     &kp COMMA         &kp NUMBER_1           &kp NUMBER_2           &kp NUMBER_3             &kp ASTRK        &kp F10  &kp F1             &kp F2           &kp F3           &kp PERIOD        &kp DELETE
-                                                   &kp SPACE              &kp NUMBER_0             &kp BACKSPACE    &trans   &kp ENTER          &kp DELETE
-            >;
-        };
-
-        nav-mac {
-            bindings = <
-&none                 &kp LA(LEFT)          &kp LA(RIGHT_ARROW)  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &trans                      &trans      &kp INSERT      &kp PAGE_DOWN   &kp PAGE_UP   &none      &none
-&none                 &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI       &kp LSHFT        &kp LS(LC(LG(NUMBER_4)))    &trans      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &none
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_PREVIOUS       &kp K_PLAY_PAUSE   &kp K_FORWARD    &trans                      &trans      &trans          &kp HOME        &kp END       &none      &toWin
-                                                                 &trans             &none            &bt BT_CLR_ALL              &caps_word  &trans          &trans
-            >;
-        };
-
-        symbols {
+        Symbols {
             bindings = <
 &none                              &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp PIPE   &kp AMPERSAND   &kp PERCENT       &kp CARET   &upDirectory       &none
 &kp RA(SLASH)                      &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
 &mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &kp HASH   &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp RA(N5)         &bt BT_NXT
                                                                    &jsfn                 &kp SPACE              &kp BACKSPACE    &trans     &trans          &trans
             >;
+
+            label = "SYMB";
         };
     };
 };
