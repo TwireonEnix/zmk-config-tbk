@@ -102,10 +102,10 @@
 
         BASE {
             bindings = <
-&kp LG(TAB)       &kp Q           &kp L           &kp Y               &kp P             &kp B            &kp Z         &kp F             &kp O               &kp U           &layerModTap 4 SLASH  &kp LA(SPACE)
-&kp RIGHT_ALT     &mt LEFT_GUI C  &mt LEFT_ALT R  &mt LEFT_CONTROL S  &mt LEFT_SHIFT T  &kp G            &kp M         &mt LEFT_SHIFT N  &mt LEFT_CONTROL E  &mt LEFT_ALT I  &mt LEFT_GUI A        &kp SINGLE_QUOTE
-&mt ENTER ESCAPE  &kp W           &kp J           &mt LC(C) V         &mt LC(V) D       &kp K            &kp X         &kp H             &kp COLON           &kp COMMA       &kp PERIOD            &mt LA(F4) DELETE
-                                                  &lt 2 TAB           &lt 4 SPACE       &kp BACKSPACE    &lt 1 ESCAPE  &lt 3 ENTER       &kp DELETE
+&kp LG(TAB)       &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &layerModTap 4 SLASH  &kp LA(SPACE)
+&kp RIGHT_ALT     &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A       &kp SINGLE_QUOTE
+&mt ENTER ESCAPE  &kp W            &kp J            &mt LC(C) V          &mt LC(V) D        &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD            &mt LA(F4) DELETE
+                                                    &lt 2 TAB            &lt 4 SPACE        &kp BACKSPACE    &lt 1 ESCAPE  &lt 3 ENTER        &kp DELETE
             >;
 
             label = "BASE";
@@ -113,10 +113,10 @@
 
         NUMBERS {
             bindings = <
-&none     &none         &kp NUMBER_7           &kp NUMBER_8               &kp NUMBER_9             &kp PLUS         &kp F12  &kp F7             &kp F8               &kp F9           &kp SLASH     &none
-&kp RALT  &kp LEFT_GUI  &mt LEFT_ALT NUMBER_4  &mt LEFT_CONTROL NUMBER_5  &mt LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11  &mt LEFT_SHIFT F4  &mt LEFT_CONTROL F5  &mt LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
-&none     &kp COMMA     &kp NUMBER_1           &kp NUMBER_2               &kp NUMBER_3             &kp STAR         &kp F10  &kp F1             &kp F2               &kp F3           &kp DOT       &kp DELETE
-                                               &kp SPACE                  &kp NUMBER_0             &kp BACKSPACE    &trans   &kp ENTER          &kp DELETE
+&none     &none         &kp NUMBER_7            &kp NUMBER_8                &kp NUMBER_9              &kp PLUS         &kp F12  &kp F7              &kp F8                &kp F9            &kp SLASH     &none
+&kp RALT  &kp LEFT_GUI  &hml LEFT_ALT NUMBER_4  &hml LEFT_CONTROL NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11  &hmr LEFT_SHIFT F4  &hmr LEFT_CONTROL F5  &hmr LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
+&none     &kp COMMA     &kp NUMBER_1            &kp NUMBER_2                &kp NUMBER_3              &kp STAR         &kp F10  &kp F1              &kp F2                &kp F3            &kp DOT       &kp DELETE
+                                                &kp SPACE                   &kp NUMBER_0              &kp BACKSPACE    &trans   &kp ENTER           &kp DELETE
             >;
 
             label = "NUM";
