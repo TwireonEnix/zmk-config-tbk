@@ -92,7 +92,7 @@
             bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <500>;
             flavor = "tap-preferred";
         };
     };
@@ -113,9 +113,9 @@
 
         NUMBERS {
             bindings = <
-&none     &none         &kp NUMBER_7            &kp NUMBER_8                &kp NUMBER_9              &kp PLUS         &kp F12  &kp F7              &kp F8                &kp F9            &kp SLASH     &none
-&kp RALT  &kp LEFT_GUI  &hml LEFT_ALT NUMBER_4  &hml LEFT_CONTROL NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &kp MINUS        &kp F11  &hmr LEFT_SHIFT F4  &hmr LEFT_CONTROL F5  &hmr LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
-&none     &kp COMMA     &kp NUMBER_1            &kp NUMBER_2                &kp NUMBER_3              &kp STAR         &kp F10  &kp F1              &kp F2                &kp F3            &kp DOT       &kp DELETE
+&none     &none         &kp NUMBER_7            &kp NUMBER_8                &kp NUMBER_9              &none            &kp F12  &kp F7              &kp F8                &kp F9            &none         &none
+&kp RALT  &kp LEFT_GUI  &hml LEFT_ALT NUMBER_4  &hml LEFT_CONTROL NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &none            &kp F11  &hmr LEFT_SHIFT F4  &hmr LEFT_CONTROL F5  &hmr LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
+&none     &kp COMMA     &kp NUMBER_1            &kp NUMBER_2                &kp NUMBER_3              &none            &kp F10  &kp F1              &kp F2                &kp F3            &kp DOT       &kp DELETE
                                                 &kp SPACE                   &kp NUMBER_0              &kp BACKSPACE    &trans   &kp ENTER           &kp DELETE
             >;
 
@@ -124,10 +124,10 @@
 
         NAVIGATION {
             bindings = <
-&none     &kp LA(LEFT_ARROW)  &kp LA(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP   &none             &none               &kp INSERT        &kp PAGE_DOWN   &kp PAGE_UP   &none                   &none
-&kp RALT  &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT         &kp LG(LS(S))     &kp LG(LEFT_ARROW)  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT               &kp LG(RIGHT)
-&none     &none               &kp C_PREVIOUS       &kp C_PLAY_PAUSE  &kp C_AC_FORWARD  &kp LS(TAB)       &none               &kp LG(UP_ARROW)  &kp HOME        &kp END       &kp LG(LS(DOWN_ARROW))  &trans
-                                                   &trans            &none             &bt BT_CLR_ALL    &caps_word          &kp ENTER         &kp DELETE
+&none     &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP   &none            &none                   &kp INSERT        &kp PAGE_DOWN   &kp PAGE_UP   &none                   &none
+&kp RALT  &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT         &kp LG(LS(S))    &kp LG(LS(LEFT_ARROW))  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT               &kp LG(LS(RIGHT))
+&none     &none               &kp C_PREVIOUS       &kp C_PLAY_PAUSE  &kp C_AC_FORWARD  &kp LS(TAB)      &none                   &kp LG(UP_ARROW)  &kp HOME        &kp END       &kp LG(LS(DOWN_ARROW))  &trans
+                                                   &trans            &none             &none            &caps_word              &kp ENTER         &kp DELETE
             >;
 
             label = "NAV";
@@ -135,10 +135,10 @@
 
         SYMBOLS {
             bindings = <
-&none                              &addSurrounds  &kp AT           &kp UNDER             &kp EQUAL              &kp PLUS         &kp PIPE   &kp AMPERSAND   &kp PERCENT       &kp CARET   &upDirectory       &none
-&kp RA(SLASH)                      &kp BACKSLASH  &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &none
-&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE      &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp STAR         &kp HASH   &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp RA(N5)         &bt BT_NXT
-                                                                   &jsfn                 &kp SPACE              &kp BACKSPACE    &trans     &trans          &trans
+&none                              &addSurrounds            &kp AT              &kp UNDER                           &kp EQUAL                          &kp PLUS         &kp PIPE   &kp AMPERSAND               &kp PERCENT                    &kp CARET         &upDirectory                 &none
+&kp RA(SLASH)                      &hml LEFT_GUI BACKSLASH  &hml LALT QUESTION  &hml LEFT_CONTROL LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_CONTROL RIGHT_BRACE  &hmr LALT DOLLAR  &hmr LEFT_GUI DOUBLE_QUOTES  &none
+&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE                &kp EXCLAMATION     &kp LEFT_BRACKET                    &kp RIGHT_BRACKET                  &kp STAR         &kp HASH   &kp LESS_THAN               &kp GREATER_THAN               &kp SEMI          &kp RA(N5)                   &bt BT_NXT
+                                                                                &jsfn                               &kp SPACE                          &kp BACKSPACE    &trans     &trans                      &trans
             >;
 
             label = "SYMB";
@@ -153,6 +153,17 @@
             >;
 
             label = "MOUSE";
+        };
+
+        bt {
+            bindings = <
+&bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans    &trans  &trans  &trans
+            >;
+
+            label = "BT";
         };
     };
 };
