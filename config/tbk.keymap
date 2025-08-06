@@ -26,17 +26,10 @@
 
 / {
     macros {
-        addSurrounds: addSurrounds {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp Y &kp Z &kp I &kp W>;
-            label = "ADDSURROUNDS";
-        };
-
         jsfn: jsfn {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp SPACE &kp EQUAL &kp GREATER_THAN &kp SPACE &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
+            bindings = <&kp EQUAL &kp GREATER_THAN &kp SPACE &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "JSFN";
         };
 
@@ -52,6 +45,13 @@
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0 &to 0>;
             label = "TOWIN";
+        };
+
+        toMac: toMac {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &to 1>;
+            label = "TOMAC";
         };
     };
 
@@ -95,6 +95,26 @@
             tapping-term-ms = <500>;
             flavor = "tap-preferred";
         };
+
+        toMacModTap: toMacModTap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TOMACMODTAP";
+            bindings = <&toMac>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+        };
+
+        toWinModTap: toWinModTap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TOWINMODTAP";
+            bindings = <&toWin>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -102,13 +122,23 @@
 
         BASE {
             bindings = <
-&kp LG(TAB)       &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &layerModTap 4 SLASH  &kp LA(SPACE)
-&kp RIGHT_ALT     &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A       &kp SINGLE_QUOTE
-&mt ENTER ESCAPE  &kp W            &kp J            &mt LC(C) V          &mt LC(V) D        &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD            &mt LA(F4) DELETE
-                                                    &lt 2 TAB            &lt 4 SPACE        &kp BACKSPACE    &lt 1 ESCAPE  &lt 3 ENTER        &kp DELETE
+&kp LG(TAB)           &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z       &kp F              &kp O                &kp U            &toMacModTap 0 SLASH  &kp LA(SPACE)
+&kp RIGHT_ALT         &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M       &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A       &kp SINGLE_QUOTE
+&layerModTap 7 ENTER  &kp W            &kp J            &mt LC(C) V          &mt LC(V) D        &kp K            &kp X       &kp H              &kp COLON            &kp COMMA        &kp PERIOD            &mt LA(F4) DELETE
+                                                        &lt 4 TAB            &kp SPACE          &kp BACKSPACE    &kp ESCAPE  &lt 6 ENTER        &lt 2 DEL
             >;
 
             label = "BASE";
+        };
+
+        MAC {
+            label = "MAC";
+            bindings = <
+&kp LC(UP_ARROW)  &kp Q                &kp L            &kp Y            &kp P              &kp B            &kp Z       &kp F              &kp O            &kp U            &toWinModTap 0 SLASH  &kp LG(SPACE)
+&kp RIGHT_ALT     &hml LEFT_CONTROL C  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &kp G            &kp M       &hmr LEFT_SHIFT N  &hmr LEFT_GUI E  &hmr LEFT_ALT I  &hmr LEFT_CONTROL A   &kp SINGLE_QUOTE
+&mt ENTER ESCAPE  &kp W                &kp J            &mt LG(C) V      &mt LG(V) D        &kp K            &kp X       &kp H              &kp COLON        &kp COMMA        &kp PERIOD            &mt LG(Q) DELETE
+                                                        &lt 5 TAB        &kp SPACE          &kp BACKSPACE    &kp ESCAPE  &lt 6 ENTER        &lt 3 DELETE
+            >;
         };
 
         NUMBERS {
@@ -122,23 +152,43 @@
             label = "NUM";
         };
 
+        NUM_MAC {
+            label = "NUM_MC";
+            bindings = <
+&none     &none             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9              &none            &kp F12     &kp F7              &kp F8            &kp F9            &none             &none
+&kp RALT  &kp LEFT_CONTROL  &hml LEFT_ALT NUMBER_4  &hml LEFT_GUI NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &none            &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_WIN F5  &hmr LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
+&none     &kp COMMA         &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3              &none            &kp F10     &kp F1              &kp F2            &kp F3            &kp DOT           &kp DELETE
+                                                    &kp SPACE               &kp NUMBER_0              &kp BACKSPACE    &kp ESCAPE  &kp ENTER           &kp DELETE
+            >;
+        };
+
         NAVIGATION {
             bindings = <
-&none     &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP   &none            &none                   &kp INSERT        &kp PAGE_DOWN   &kp PAGE_UP   &none                   &none
-&kp RALT  &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT         &kp LG(LS(S))    &kp LG(LS(LEFT_ARROW))  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT               &kp LG(LS(RIGHT))
-&none     &none               &kp C_PREVIOUS       &kp C_PLAY_PAUSE  &kp C_AC_FORWARD  &kp LS(TAB)      &none                   &kp LG(UP_ARROW)  &kp HOME        &kp END       &kp LG(LS(DOWN_ARROW))  &trans
-                                                   &trans            &none             &none            &caps_word              &kp ENTER         &kp DELETE
+&none     &kp LG(LEFT_ARROW)  &kp LG(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP   &none            &kp LS(LG(LEFT))    &kp INSERT        &kp PAGE_DOWN   &kp PAGE_UP   &none                   &kp LG(LS(RIGHT))
+&kp RALT  &kp LEFT_GUI        &kp LALT             &kp LCTRL         &kp LSHFT         &kp LG(LS(S))    &kp LG(LEFT_ARROW)  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT               &kp LG(RIGHT)
+&none     &none               &kp C_PREVIOUS       &kp C_PLAY_PAUSE  &kp C_AC_FORWARD  &kp LS(TAB)      &none               &kp LG(UP_ARROW)  &kp HOME        &kp END       &kp LG(LS(DOWN_ARROW))  &trans
+                                                   &trans            &none             &none            &caps_word          &kp ENTER         &kp DELETE
             >;
 
             label = "NAV";
         };
 
+        NAV_MAC {
+            label = "NAV_MAC";
+            bindings = <
+&none                 &kp LG(LEFT_ARROW)    &kp LG(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP   &none                       &kp LA(LC(LG(LEFT)))    &kp INSERT         &kp PAGE_DOWN   &kp PAGE_UP   &kp LC(LA(C))          &kp LA(LC(LG(RIGHT)))
+&kp RALT              &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI      &kp LSHFT         &kp LG(LS(LC(NUMBER_4)))    &kp LA(LC(LEFT_ARROW))  &kp LEFT_ARROW     &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT              &kp LC(LA(RIGHT))
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp C_PREVIOUS       &kp C_PLAY_PAUSE  &kp C_AC_FORWARD  &none                       &none                   &kp LC(LA(ENTER))  &kp HOME        &kp END       &kp LC(LA(BACKSPACE))  &trans
+                                                                 &trans            &none             &none                       &caps_word              &kp ENTER          &kp DELETE
+            >;
+        };
+
         SYMBOLS {
             bindings = <
-&none                              &addSurrounds            &kp AT              &kp UNDER                           &kp EQUAL                          &kp PLUS         &kp PIPE   &kp AMPERSAND               &kp PERCENT                    &kp CARET         &upDirectory                 &none
-&kp RA(SLASH)                      &hml LEFT_GUI BACKSLASH  &hml LALT QUESTION  &hml LEFT_CONTROL LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_CONTROL RIGHT_BRACE  &hmr LALT DOLLAR  &hmr LEFT_GUI DOUBLE_QUOTES  &none
-&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE                &kp EXCLAMATION     &kp LEFT_BRACKET                    &kp RIGHT_BRACKET                  &kp STAR         &kp HASH   &kp LESS_THAN               &kp GREATER_THAN               &kp SEMI          &kp RA(N5)                   &bt BT_NXT
-                                                                                &jsfn                               &kp SPACE                          &kp BACKSPACE    &trans     &trans                      &trans
+&none                              &kp RA(SLASH)                &kp AT              &kp UNDER                       &kp EQUAL                          &kp PLUS         &kp PIPE   &kp AMPERSAND               &kp PERCENT                    &kp CARET         &upDirectory                 &none
+&jsfn                              &hml LEFT_CONTROL BACKSLASH  &hml LALT QUESTION  &hml LEFT_GUI LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_CONTROL RIGHT_BRACE  &hmr LALT DOLLAR  &hmr LEFT_GUI DOUBLE_QUOTES  &none
+&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE                    &kp EXCLAMATION     &kp LEFT_BRACKET                &kp RIGHT_BRACKET                  &kp STAR         &kp HASH   &kp LESS_THAN               &kp GREATER_THAN               &kp SEMI          &kp RA(N5)                   &bt BT_NXT
+                                                                                    &kp TAB                         &kp SPACE                          &kp BACKSPACE    &trans     &trans                      &trans
             >;
 
             label = "SYMB";
