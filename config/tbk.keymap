@@ -185,10 +185,10 @@
 
         SYMBOLS {
             bindings = <
-&none                              &kp RA(SLASH)                &kp AT              &kp UNDER                       &kp EQUAL                          &kp PLUS         &kp PIPE   &kp AMPERSAND               &kp PERCENT                    &kp CARET         &upDirectory                 &none
-&jsfn                              &hml LEFT_CONTROL BACKSLASH  &hml LALT QUESTION  &hml LEFT_GUI LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp MINUS        &kp GRAVE  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_CONTROL RIGHT_BRACE  &hmr LALT DOLLAR  &hmr LEFT_GUI DOUBLE_QUOTES  &none
-&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp TILDE                    &kp EXCLAMATION     &kp LEFT_BRACKET                &kp RIGHT_BRACKET                  &kp STAR         &kp HASH   &kp LESS_THAN               &kp GREATER_THAN               &kp SEMI          &kp RA(N5)                   &bt BT_NXT
-                                                                                    &kp TAB                         &kp SPACE                          &kp BACKSPACE    &trans     &trans                      &trans
+&none                              &kp RA(SLASH)            &kp GRAVE           &kp UNDER                       &kp PLUS                           &kp PIPE         &kp AT     &kp AMPERSAND               &kp PERCENT                    &kp CARET         &upDirectory                 &none
+&jsfn                              &hml LEFT_CONTROL TILDE  &hml LALT QUESTION  &hml LEFT_GUI LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp MINUS        &kp EQUAL  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_CONTROL RIGHT_BRACE  &hmr LALT DOLLAR  &hmr LEFT_GUI DOUBLE_QUOTES  &none
+&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp BACKSLASH            &kp EXCLAMATION     &kp LEFT_BRACKET                &kp RIGHT_BRACKET                  &kp STAR         &kp HASH   &kp LESS_THAN               &kp GREATER_THAN               &kp SEMI          &kp RA(N5)                   &bt BT_NXT
+                                                                                &kp TAB                         &kp SPACE                          &kp BACKSPACE    &trans     &trans                      &trans
             >;
 
             label = "SYMB";
