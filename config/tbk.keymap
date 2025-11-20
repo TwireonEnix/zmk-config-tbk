@@ -146,7 +146,7 @@
 &none     &none         &kp NUMBER_7            &kp NUMBER_8                &kp NUMBER_9              &none            &kp F12  &kp F7              &kp F8                &kp F9            &none         &none
 &kp RALT  &kp LEFT_GUI  &hml LEFT_ALT NUMBER_4  &hml LEFT_CONTROL NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &none            &kp F11  &hmr LEFT_SHIFT F4  &hmr LEFT_CONTROL F5  &hmr LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
 &none     &kp COMMA     &kp NUMBER_1            &kp NUMBER_2                &kp NUMBER_3              &none            &kp F10  &kp F1              &kp F2                &kp F3            &kp DOT       &kp DELETE
-                                                &kp SPACE                   &kp NUMBER_0              &kp BACKSPACE    &trans   &kp ENTER           &kp DELETE
+                                                &kp NUMBER_0                &kp SPACE                 &kp BACKSPACE    &trans   &kp ENTER           &kp DELETE
             >;
 
             label = "NUM";
@@ -158,7 +158,7 @@
 &none     &none             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9              &none            &kp F12     &kp F7              &kp F8            &kp F9            &none             &none
 &kp RALT  &kp LEFT_CONTROL  &hml LEFT_ALT NUMBER_4  &hml LEFT_GUI NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &none            &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_WIN F5  &hmr LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
 &none     &kp COMMA         &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3              &none            &kp F10     &kp F1              &kp F2            &kp F3            &kp DOT           &kp DELETE
-                                                    &kp SPACE               &kp NUMBER_0              &kp BACKSPACE    &kp ESCAPE  &kp ENTER           &kp DELETE
+                                                    &kp NUMBER_0            &kp SPACE                 &kp BACKSPACE    &kp ESCAPE  &kp ENTER           &kp DELETE
             >;
         };
 
@@ -185,10 +185,10 @@
 
         SYMBOLS {
             bindings = <
-&none                              &kp RA(SLASH)            &kp ASTRK           &kp MINUS                       &kp PLUS                           &kp AT           &kp PIPE   &kp AMPERSAND               &kp PERCENT                &kp CARET         &upDirectory                     &none
-&jsfn                              &hml LEFT_CONTROL TILDE  &hml LALT QUESTION  &hml LEFT_GUI LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp EQUAL        &kp GRAVE  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_GUI RIGHT_BRACE  &hmr LALT DOLLAR  &hmr LEFT_CONTROL DOUBLE_QUOTES  &none
-&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp BACKSLASH            &kp EXCLAMATION     &kp LEFT_BRACKET                &kp RIGHT_BRACKET                  &kp UNDER        &kp HASH   &kp LESS_THAN               &kp GREATER_THAN           &kp SEMI          &kp RA(N5)                       &bt BT_NXT
-                                                                                &kp TAB                         &kp SPACE                          &kp BACKSPACE    &trans     &trans                      &trans
+&kp LEFT_GUI                       &kp RA(SLASH)  &kp ASTRK        &kp MINUS                       &kp PLUS                           &kp AT           &kp PIPE   &kp AMPERSAND               &kp PERCENT                &kp CARET         &upDirectory                     &kp LEFT_GUI
+&kp LSHFT                          &kp TILDE      &kp QUESTION     &hml LEFT_GUI LEFT_PARENTHESIS  &hml LEFT_SHIFT RIGHT_PARENTHESIS  &kp EQUAL        &kp GRAVE  &hmr LEFT_SHIFT LEFT_BRACE  &hmr LEFT_GUI RIGHT_BRACE  &hmr LALT DOLLAR  &hmr LEFT_CONTROL DOUBLE_QUOTES  &kp LEFT_SHIFT
+&mt RA(LS(NUMBER_1)) RA(NUMBER_1)  &kp BACKSLASH  &kp EXCLAMATION  &kp LEFT_BRACKET                &kp RIGHT_BRACKET                  &kp UNDER        &kp HASH   &kp LESS_THAN               &kp GREATER_THAN           &kp SEMI          &kp RA(N5)                       &bt BT_NXT
+                                                                   &jsfn                           &kp SPACE                          &kp BACKSPACE    &trans     &trans                      &trans
             >;
 
             label = "SYMB";
