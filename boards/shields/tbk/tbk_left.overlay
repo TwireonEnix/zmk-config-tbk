@@ -67,8 +67,6 @@
         refresh-frequency = <4>;
         extcomin-frequency = <1>;
 
-        extcomin-gpios = <0>;
-        disp-gpios = <0>;
     };
 };
 
