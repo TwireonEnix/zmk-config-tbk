@@ -6,20 +6,12 @@ if SHIELD_TBK_LEFT
   config ZMK_SPLIT_BLE_ROLE_CENTRAL
       default y
 
+  # This is the ONLY display-related setting ZMK actually needs
   config DISPLAY
-    bool "Enable display"
     default y
 
-  config DISPLAY_SHARP_MEMLCD
-    bool "Enable Sharp Memory LCD support"
-    default y
-
+  # ZMK uses hardware SPI — no manual SPI configs required
   config SPI
-    bool "Enable SPI subsystem"
-    default y
-
-  config SPI_GPIO
-    bool "Enable software SPI driver"
     default y
 
 endif
