@@ -6,6 +6,22 @@ if SHIELD_TBK_LEFT
   config ZMK_SPLIT_BLE_ROLE_CENTRAL
       default y
 
+  config DISPLAY
+    bool "Enable display"
+    default y
+
+  config DISPLAY_SHARP_MEMLCD
+    bool "Enable Sharp Memory LCD support"
+    default y
+
+  config SPI
+    bool "Enable SPI subsystem"
+    default y
+
+  config SPI_GPIO
+    bool "Enable software SPI driver"
+    default y
+
 endif
 
 if SHIELD_TBK_LEFT || SHIELD_TBK_RIGHT
