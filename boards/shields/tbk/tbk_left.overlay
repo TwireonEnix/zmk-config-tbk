@@ -53,5 +53,5 @@
         bpp = <1>;
         refresh-frequency = <4>;
         extcomin-frequency = <1>;
-    }
+    };
 };
