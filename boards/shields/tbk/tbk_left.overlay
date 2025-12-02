@@ -1,20 +1,19 @@
 #include "tbk.dtsi"
 
 &kscan0 {
-    row-gpios
-        = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-        ;
-    col-gpios
-        = <&pro_micro 9 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 8 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 7 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 6 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 5 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 4 GPIO_ACTIVE_HIGH>
-        ;
+    row-gpios =
+        <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+        <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+
+    col-gpios =
+        <&pro_micro 9 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 8 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 7 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 6 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 5 GPIO_ACTIVE_HIGH>,
+        <&pro_micro 4 GPIO_ACTIVE_HIGH>;
 };
 
 &pinctrl {
@@ -40,12 +39,10 @@
 
 &spi1 {
     status = "okay";
-
     pinctrl-0 = <&spi1_default>;
     pinctrl-1 = <&spi1_sleep>;
     pinctrl-names = "default", "sleep";
 
-    /* CS goes HIGH in suspend (inactive) */
     cs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
 
     sharp_display: ls011b7dh03@0 {
@@ -53,11 +50,14 @@
         reg = <0>;
         spi-max-frequency = <2000000>;
 
-        width = <128>;
-        height = <128>;
+        /* REAL RESOLUTION OF LS011B7DH03 */
+        width = <400>;
+        height = <240>;
 
-        disp-scs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
+        /* Display enable / power control */
+        disp-en-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
 
+        /* No EXTCOM pin, allow Zephyr to simulate */
         extcomin-supported = <0>;
 
         status = "okay";
