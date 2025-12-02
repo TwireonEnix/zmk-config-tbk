@@ -59,8 +59,14 @@
         bpp = <1>;
         refresh-frequency = <4>;
         extcomin-frequency = <1>;
-
         width  = <160>;
         height = <68>;
+    };
+};
+
+
+ / {
+    chosen {
+        zephyr,display = &nice_view;
     };
 };
