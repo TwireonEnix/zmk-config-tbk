@@ -25,21 +25,46 @@
     status = "disabled";
 };
 
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <
+                NRF_PSEL(SPIM_MOSI, 0, 31)
+                NRF_PSEL(SPIM_SCK, 0, 29)
+            >;
+        };
+    };
+
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <
+                NRF_PSEL(SPIM_MOSI, 0, 31)
+                NRF_PSEL(SPIM_SCK, 0, 29)
+            >;
+            low-power-enable;
+        };
+    };
+};
+
 &spi0 {
     status = "okay";
+    compatible = "nordic,nrf-spim";
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
 
-    sharp_ls011b7dh03: sharp_ls011b7dh03@0 {
+    cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
+
+    nice_view: display@0 {
         compatible = "sharp,ls011b7dh03";
-        reg = <0>;
         label = "NiceView";
-
-        spi-max-frequency = <2000000>;
+        reg = <0>;
+        spi-max-frequency = <1000000>;
+        bpp = <1>;
+        refresh-frequency = <4>;
+        extcomin-frequency = <1>
 
         width  = <160>;
         height = <68>;
-
-        cs-gpios       = <&gpio0 9 GPIO_ACTIVE_LOW>;
-        extcomin-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;
-        enable-gpios   = <&gpio0 28 GPIO_ACTIVE_HIGH>;
     };
 };
