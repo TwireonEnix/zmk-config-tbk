@@ -50,6 +50,8 @@
         compatible = "sharp,ls011b7dh03";
         reg = <0>;
         spi-max-frequency = <2000000>;
+        width = <68>;
+        height = <160>;
 
         /* No DISP, no VCOM, no EXTCOMIN */
         extcomin-supported = <0>;
