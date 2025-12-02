@@ -20,24 +20,33 @@
 &pinctrl {
     spi0_default: spi0_default {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 31)>,    // Set P1.07 as MOSI
-                    <NRF_PSEL(SPIM_SCK, 0, 29)>;     // Set P1.02 as SCK
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 31)>,    
+                    <NRF_PSEL(SPIM_SCK, 0, 29)>;    
         };
     };
     
     spi0_sleep: spi0_sleep {
         group1 {
-            psels = <NRF_PSEL(SPIM_MOSI, 0, 31)>,    // Set P1.07 as MOSI
-                    <NRF_PSEL(SPIM_SCK, 0, 29)>;     // Set P1.02 as SCK
+            psels = <NRF_PSEL(SPIM_MOSI, 0, 31)>,  
+                    <NRF_PSEL(SPIM_SCK, 0, 29)>;  
             low-power-enable;
         };
     };
 };
 
-nice_view_spi: &spi0 {
-    compatible = "nordic,nrf-spim";
+/* SPI + Nice!View node */
+&spi0 {
+    status = "okay";
     pinctrl-0 = <&spi0_default>;
     pinctrl-1 = <&spi0_sleep>;
     pinctrl-names = "default", "sleep";
-    cs-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
+
+    cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
+
+    nice_view: display@0 {
+        compatible = "sharp,ls011b7dh03";
+        reg = <0>;
+        spi-max-frequency = <1000000>;
+        label = "NiceView";
+    };
 };
