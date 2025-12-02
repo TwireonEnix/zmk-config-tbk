@@ -47,5 +47,7 @@
         cs-gpios       = <&gpio0 9 GPIO_ACTIVE_LOW>;
         extcomin-gpios = <&gpio0 31 GPIO_ACTIVE_HIGH>;   /* pick any free GPIO */
         enable-gpios   = <&gpio0 28 GPIO_ACTIVE_HIGH>;  /* pick any free GPIO */
+        width = <160>;
+        height = <68>;
     };
 };
