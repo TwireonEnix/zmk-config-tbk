@@ -5,7 +5,7 @@
         zmk,kscan = &kscan0;
         zmk,matrix_transform = &default_transform;
         zmk,battery = &vbatt;
-        zephyr,display = nice_view_spi;
+        zephyr,display = &spi0;
     };
 
     vbatt: vbatt {
