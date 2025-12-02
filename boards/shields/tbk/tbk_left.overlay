@@ -17,54 +17,55 @@
         ;
 };
 
-&spi1 {
-    status = "disabled";
-};
-
 &pinctrl {
-    spi0_default: spi0_default {
+    spi1_default: spi1_default {
         group1 {
             psels = <
-                NRF_PSEL(SPIM_MOSI, 0, 29)
-                NRF_PSEL(SPIM_SCK, 0, 2)
+                NRF_PSEL(SPIM_SCK, 0, 2)     /* SCLK P0.02 */
+                NRF_PSEL(SPIM_MOSI, 0, 29)   /* SI P0.29 */
             >;
         };
     };
 
-    spi0_sleep: spi0_sleep {
+    spi1_sleep: spi1_sleep {
         group1 {
             psels = <
-                NRF_PSEL(SPIM_MOSI, 0, 29)
                 NRF_PSEL(SPIM_SCK, 0, 2)
+                NRF_PSEL(SPIM_MOSI, 0, 29)
             >;
             low-power-enable;
         };
     };
 };
 
-&spi0 {
+&spi1 {
     status = "okay";
-    compatible = "nordic,nrf-spim";
 
-    pinctrl-0 = <&spi0_default>;
-    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-0 = <&spi1_default>;
+    pinctrl-1 = <&spi1_sleep>;
     pinctrl-names = "default", "sleep";
 
-    cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
+    /* CS goes HIGH in suspend (inactive) */
+    cs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
 
-    nice_view: ls0xx@0 {
+    sharp_display: ls011b7dh03@0 {
+        compatible = "sharp,ls011b7dh03";
         reg = <0>;
-        compatible = "sharp,ls0xx";
-        label = "NiceView";
+        spi-max-frequency = <2000000>;
 
-        spi-max-frequency = <1000000>;
-        width = <160>;
-        height = <68>;
+        width = <128>;
+        height = <128>;
+
+        disp-scs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
+
+        extcomin-supported = <0>;
+
+        status = "okay";
     };
 };
 
 / {
     chosen {
-        zephyr,display = &nice_view;
+        zephyr,display = &sharp_display;
     };
 };
