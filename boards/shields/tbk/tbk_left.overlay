@@ -54,12 +54,14 @@
 
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 
-    nice_view: display@0 {
+    nice_view: sharp_ls011b7dh03@0 {
         compatible = "sharp,ls011b7dh03";
         label = "NiceView";
         reg = <0>;
-        spi-max-frequency = <1000000>;
+        spi-max-frequency = <4000000>;
         bpp = <1>;
+        width = <160>;
+        height = <68>;
         refresh-frequency = <4>;
         extcomin-frequency = <1>;
     };
