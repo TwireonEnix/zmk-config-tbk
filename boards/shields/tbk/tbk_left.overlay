@@ -52,7 +52,7 @@
 
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 
-    nice_view: display@0 {
+    nice_view: ls0xx@0 {
         reg = <0>;
         compatible = "sharp,ls0xx";
         label = "NiceView";
