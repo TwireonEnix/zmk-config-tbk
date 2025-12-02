@@ -63,8 +63,6 @@
         extcomin-frequency = <1>;
         width  = <160>;
         height = <68>;
-        extcomin-gpios = <0>;
-        disp-gpios     = <0>;
     };
 };
 
