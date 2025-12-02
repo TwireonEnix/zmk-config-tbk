@@ -20,8 +20,8 @@
     spi1_default: spi1_default {
         group1 {
             psels = <
-                NRF_PSEL(SPIM_SCK, 0, 2)     /* SCLK P0.02 */
-                NRF_PSEL(SPIM_MOSI, 0, 29)   /* SI P0.29 */
+                NRF_PSEL(SPIM_SCK, 0, 2)    /* SCLK */
+                NRF_PSEL(SPIM_MOSI, 0, 29)  /* SI   */
             >;
         };
     };
@@ -39,33 +39,27 @@
 
 &spi1 {
     status = "okay";
+
     pinctrl-0 = <&spi1_default>;
     pinctrl-1 = <&spi1_sleep>;
     pinctrl-names = "default", "sleep";
 
     cs-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
 
-    sharp_display: ls011b7dh03@0 {
+    display: display@0 {
         compatible = "sharp,ls011b7dh03";
         reg = <0>;
         spi-max-frequency = <2000000>;
 
-        /* REAL RESOLUTION OF LS011B7DH03 */
-        width = <400>;
-        height = <240>;
-
-        /* Display enable / power control */
-        disp-en-gpios = <&pro_micro 10 GPIO_ACTIVE_LOW>;
-
-        /* No EXTCOM pin, allow Zephyr to simulate */
+        /* No DISP, no VCOM, no EXTCOMIN */
         extcomin-supported = <0>;
 
         status = "okay";
     };
 };
 
-/ {
+ / {
     chosen {
-        zephyr,display = &sharp_display;
+        zephyr,display = &display;
     };
 };
