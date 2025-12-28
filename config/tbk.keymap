@@ -123,19 +123,19 @@
         MAC {
             label = "MAC";
             bindings = <
-&kp LC(UP_ARROW)  &kp Q                &kp L            &kp Y            &kp P              &kp B            &kp Z       &kp F              &kp O            &kp U     &kp SLASH         &kp LG(SPACE)
-&kp RIGHT_ALT     &hml LEFT_CONTROL C  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &kp G            &kp M       &hmr LEFT_SHIFT N  &hmr LEFT_GUI E  &hmr LEFT_ALT I  &hmr LEFT_CONTROL A   &kp SINGLE_QUOTE
-&toWinModTap 0 ESCAPE  &kp W                &mt LG(X) J            &mt LG(C) V      &mt LG(V) D        &kp K            &kp X       &kp H              &kp COLON        &kp COMMA        &kp PERIOD            &mt LG(Q) DELETE
-                                                        &lt 5 TAB        &lt 7 SPACE        &kp BACKSPACE    &lt 3 ESCAPE  &lt 6 ENTER        &kp DELETE
+&kp LC(UP_ARROW)       &kp Q                &kp L            &kp Y            &kp P              &kp B            &kp Z         &kp F              &kp O            &kp U            &kp SLASH             &kp LG(SPACE)
+&kp RIGHT_ALT          &hml LEFT_CONTROL C  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_GUI E  &hmr LEFT_ALT I  &hmr LEFT_CONTROL A   &kp SINGLE_QUOTE
+&toWinModTap 0 ESCAPE  &kp W                &mt LG(X) J      &mt LG(C) V      &mt LG(V) D        &kp K            &kp X         &kp H              &kp COLON        &kp COMMA        &kp PERIOD            &mt LG(Q) DELETE
+                                                             &lt 5 TAB        &lt 7 SPACE        &kp BACKSPACE    &lt 3 ESCAPE  &lt 6 ENTER        &kp DELETE
             >;
         };
 
         WIN {
             bindings = <
-&kp LG(TAB)       &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z       &kp F              &kp O                &kp U            &kp SLASH  &kp LA(SPACE)
-&kp RIGHT_ALT     &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M       &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A       &kp SINGLE_QUOTE
-&&toMacModTap 0 ESCAPE  &kp W            &mt LC(X) J            &mt LC(C) V          &mt LC(V) D        &kp K            &kp X       &kp H              &kp COLON            &kp COMMA        &kp PERIOD            &mt LA(F4) DELETE
-                                                    &lt 4 TAB            &lt 7 SPACE        &kp BACKSPACE    &lt 2 ESCAPE  &lt 6 ENTER        &kp DELETE
+&kp LG(TAB)             &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &kp SLASH             &kp LA(SPACE)
+&kp RIGHT_ALT           &hml LEFT_GUI C  &hml LEFT_ALT R  &hml LEFT_CONTROL S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E  &hmr LEFT_ALT I  &hmr LEFT_GUI A       &kp SINGLE_QUOTE
+&toMacModTap 0 ESCAPE   &kp W            &mt LC(X) J      &mt LC(C) V          &mt LC(V) D        &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD            &mt LA(F4) DELETE
+                                                          &lt 4 TAB            &lt 7 SPACE        &kp BACKSPACE    &lt 2 ESCAPE  &lt 6 ENTER        &kp DELETE
             >;
 
             label = "WIN";
