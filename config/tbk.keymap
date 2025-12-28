@@ -30,35 +30,30 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp EQUAL &kp GREATER_THAN &kp SPACE &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
-            label = "JSFN";
         };
 
         upDirectory: upDirectory {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp PERIOD &kp PERIOD &kp SLASH>;
-            label = "UPDIRECTORY";
         };
 
         toWin: toWin {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 1 &to 1>;
-            label = "TOWIN";
         };
 
         toMac: toMac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&bt BT_SEL 0 &to 0>;
-            label = "TOMAC";
         };
     };
 
     behaviors {
         hml: home_row_mod_left {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_LEFT_HAND";
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <100>;
@@ -73,7 +68,6 @@
 
         hmr: home_row_mod_right {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS_RIGHT_HAND";
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <100>;
@@ -88,7 +82,6 @@
 
         layerModTap: layerModTap {
             compatible = "zmk,behavior-hold-tap";
-            label = "LAYERMODTAP";
             bindings = <&to>, <&kp>;
 
             #binding-cells = <2>;
@@ -98,7 +91,6 @@
 
         toMacModTap: toMacModTap {
             compatible = "zmk,behavior-hold-tap";
-            label = "TOMACMODTAP";
             bindings = <&toMac>, <&kp>;
 
             #binding-cells = <2>;
@@ -108,7 +100,6 @@
 
         toWinModTap: toWinModTap {
             compatible = "zmk,behavior-hold-tap";
-            label = "TOWINMODTAP";
             bindings = <&toWin>, <&kp>;
 
             #binding-cells = <2>;
@@ -121,7 +112,7 @@
         compatible = "zmk,keymap";
 
         MAC {
-            label = "MAC";
+            display-name = "MAC";
             bindings = <
 &kp LC(UP_ARROW)       &kp Q                &kp L            &kp Y            &kp P              &kp B            &kp Z         &kp F              &kp O            &kp U            &kp SLASH             &kp LG(SPACE)
 &kp RIGHT_ALT          &hml LEFT_CONTROL C  &hml LEFT_ALT R  &hml LEFT_GUI S  &hml LEFT_SHIFT T  &kp G            &kp M         &hmr LEFT_SHIFT N  &hmr LEFT_GUI E  &hmr LEFT_ALT I  &hmr LEFT_CONTROL A   &kp SINGLE_QUOTE
@@ -138,7 +129,7 @@
                                                           &lt 4 TAB            &lt 7 SPACE        &kp BACKSPACE    &lt 2 ESCAPE  &lt 6 ENTER        &kp DELETE
             >;
 
-            label = "WIN";
+            display-name = "WIN";
         };
 
         NUMBERS {
@@ -149,11 +140,11 @@
                                                 &kp NUMBER_0                &kp SPACE                 &kp BACKSPACE    &trans   &kp ENTER           &kp DELETE
             >;
 
-            label = "NUM";
+            display-name = "NUM";
         };
 
         NUM_MAC {
-            label = "NUM_MC";
+            display-name = "NUM_MC";
             bindings = <
 &none     &none             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9              &none            &kp F12     &kp F7              &kp F8            &kp F9            &none             &none
 &kp RALT  &kp LEFT_CONTROL  &hml LEFT_ALT NUMBER_4  &hml LEFT_GUI NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &none            &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_WIN F5  &hmr LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
@@ -170,11 +161,11 @@
                                                    &trans            &none             &none            &caps_word          &kp ENTER         &kp DELETE
             >;
 
-            label = "NAV";
+            display-name = "NAV";
         };
 
         NAV_MAC {
-            label = "NAV_MAC";
+            display-name = "NAV_MAC";
             bindings = <
 &none                 &kp LG(LEFT_ARROW)    &kp LG(RIGHT_ARROW)  &kp C_VOL_DN      &kp C_VOLUME_UP   &none                       &kp LA(LC(LG(LEFT)))    &kp INSERT         &kp PAGE_DOWN   &kp PAGE_UP   &kp LC(LA(C))          &kp LA(LC(LG(RIGHT)))
 &kp RALT              &kp LEFT_CONTROL      &kp LALT             &kp LEFT_GUI      &kp LSHFT         &kp LG(LS(LC(NUMBER_4)))    &kp LA(LC(LEFT_ARROW))  &kp LEFT_ARROW     &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT              &kp LC(LA(RIGHT))
@@ -191,7 +182,7 @@
                                                                    &jsfn                 &kp SPACE              &kp BACKSPACE    &trans     &trans          &trans
             >;
 
-            label = "SYMB";
+            display-name = "SYMB";
         };
 
         MOUSE {
@@ -202,7 +193,7 @@
                                    &trans    &trans    &trans            &trans  &trans          &trans
             >;
 
-            label = "MOUSE";
+            display-name = "MOUSE";
         };
 
         bt {
@@ -213,7 +204,7 @@
                                 &trans  &trans  &trans    &trans  &trans  &trans
             >;
 
-            label = "BT";
+            display-name = "BT";
         };
     };
 };
