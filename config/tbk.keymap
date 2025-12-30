@@ -37,9 +37,10 @@
     };
 
     behaviors {
-           /* ---------- Homerow Mods (Canary) ---------- */
-    hm_base: hm_base {
-      compatible = "zmk,behavior-hold-tap";
+
+    hm_c: hm_c { 
+        hold-trigger-key-positions = <16 17 18 19 28 29 30 31 32 33 34>; 
+        compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
       bindings = <&kp>, <&kp>;
       tapping-term-ms = <185>;
@@ -48,15 +49,82 @@
       hold-trigger-on-release;
     };
 
-    hm_c: hm_c { inherit = <&hm_base>; #binding-cells = <2>; hold-trigger-key-positions = <16 17 18 19 28 29 30 31 32 33 34>; };
-    hm_r: hm_r { inherit = <&hm_base>; #binding-cells = <2>; hold-trigger-key-positions = <15 17 18 19 28 29 30 31 32 33 34>; };
-    hm_s: hm_s { inherit = <&hm_base>; #binding-cells = <2>; hold-trigger-key-positions = <15 16 18 19 28 29 30 31 32 33 34>; };
-    hm_t: hm_t { inherit = <&hm_base>; #binding-cells = <2>; hold-trigger-key-positions = <15 16 17 19 28 29 30 31 32 33 34>; };
+    hm_r: hm_r { 
+         compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <135>;
+      flavor = "balanced";
+      hold-trigger-on-release;
+        hold-trigger-key-positions = <15 17 18 19 28 29 30 31 32 33 34>; 
+        };
+        
+    hm_s: hm_s {
+               compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <135>;
+      flavor = "balanced";
+      hold-trigger-on-release;
+        hold-trigger-key-positions = <15 16 18 19 28 29 30 31 32 33 34>; 
+        };
 
-    hm_n: hm_n { inherit = <&hm_base>; #binding-cells = <2>; hold-trigger-key-positions = <24 25 26 35 36 37 38 39 40 41>; };
-    hm_e: hm_e { inherit = <&hm_base>; #binding-cells = <2>; hold-trigger-key-positions = <23 25 26 35 36 37 38 39 40 41>; };
-    hm_i: hm_i { inherit = <&hm_base>; #binding-cells = <2>; hold-trigger-key-positions = <23 24 26 35 36 37 38 39 40 41>; };
-    hm_a_r: hm_a_r { inherit = <&hm_base>; #binding-cells = <2>; hold-trigger-key-positions = <23 24 25 35 36 37 38 39 40 41>; };
+    hm_t: hm_t { 
+               compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <135>;
+      flavor = "balanced";
+      hold-trigger-on-release;
+      hold-trigger-key-positions = <15 16 17 19 28 29 30 31 32 33 34>; 
+      };
+
+    hm_n: hm_n { 
+               compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <135>;
+      flavor = "balanced";
+      hold-trigger-on-release;
+      hold-trigger-key-positions = <24 25 26 35 36 37 38 39 40 41>; 
+      };
+
+    hm_e: hm_e { 
+               compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <135>;
+      flavor = "balanced";
+      hold-trigger-on-release;
+      hold-trigger-key-positions = <23 25 26 35 36 37 38 39 40 41>; 
+      };
+
+    hm_i: hm_i {
+               compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <135>;
+      flavor = "balanced";
+      hold-trigger-on-release;
+       hold-trigger-key-positions = <23 24 26 35 36 37 38 39 40 41>; 
+       };
+
+    hm_a_r: hm_a_r { 
+               compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      bindings = <&kp>, <&kp>;
+      tapping-term-ms = <185>;
+      quick-tap-ms = <135>;
+      flavor = "balanced";
+      hold-trigger-on-release;
+      hold-trigger-key-positions = <23 24 25 35 36 37 38 39 40 41>;
+       };
 
     /* ---------- Safe layer toggles ---------- */
     to_fast: to_fast {
