@@ -53,6 +53,7 @@
 
     behaviors {
     hm_c: hm_c {
+            bindings = <&kp>, <&kp>;
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         tapping-term-ms = <185>;
@@ -63,6 +64,7 @@
         };
 
         hm_r: hm_r {
+            bindings = <&kp>, <&kp>;
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         tapping-term-ms = <185>;
@@ -73,6 +75,7 @@
         };
 
         hm_s: hm_s {
+            bindings = <&kp>, <&kp>;
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         tapping-term-ms = <185>;
@@ -83,6 +86,7 @@
         };
 
         hm_t: hm_t {
+            bindings = <&kp>, <&kp>;
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         tapping-term-ms = <185>;
@@ -93,6 +97,7 @@
         };
 
         hm_n: hm_n {
+            bindings = <&kp>, <&kp>;
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         tapping-term-ms = <185>;
@@ -103,6 +108,7 @@
         };
 
         hm_e: hm_e {
+            bindings = <&kp>, <&kp>;
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         tapping-term-ms = <185>;
@@ -113,6 +119,7 @@
         };
 
         hm_i: hm_i {
+            bindings = <&kp>, <&kp>;
         compatible = "zmk,behavior-hold-tap";
         #binding-cells = <2>;
         tapping-term-ms = <185>;
@@ -124,6 +131,7 @@
 
         hm_a_r: hm_a_r {
         compatible = "zmk,behavior-hold-tap";
+            bindings = <&kp>, <&kp>;
         #binding-cells = <2>;
         tapping-term-ms = <185>;
         quick-tap-ms = <135>;
