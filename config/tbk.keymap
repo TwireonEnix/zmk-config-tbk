@@ -188,7 +188,7 @@
         NUMBERS {
             bindings = <
 &none     &none         &kp NUMBER_7            &kp NUMBER_8                &kp NUMBER_9              &none            &kp F12  &kp F7              &kp F8                &kp F9            &none         &none
-&kp RALT  &kp LEFT_GUI  &hml LEFT_ALT NUMBER_4  &hml LEFT_CONTROL NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &none            &kp F11  &hmr LEFT_SHIFT F4  &hmr LEFT_CONTROL F5  &hmr LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
+&kp RALT  &kp LEFT_GUI  &hm_r LEFT_ALT NUMBER_4  &hm_s LEFT_CONTROL NUMBER_5  &hm_t LEFT_SHIFT NUMBER_6  &none            &kp F11  &hm_n LEFT_SHIFT F4  &hm_e LEFT_CONTROL F5  &hm_i LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
 &none     &kp COMMA     &kp NUMBER_1            &kp NUMBER_2                &kp NUMBER_3              &none            &kp F10  &kp F1              &kp F2                &kp F3            &kp DOT       &kp DELETE
                                                 &kp NUMBER_0                &kp SPACE                 &kp BACKSPACE    &trans   &kp ENTER           &kp DELETE
             >;
@@ -200,7 +200,7 @@
             display-name = "NUM_MC";
             bindings = <
 &none     &none             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9              &none            &kp F12     &kp F7              &kp F8            &kp F9            &none             &none
-&kp RALT  &kp LEFT_CONTROL  &hml LEFT_ALT NUMBER_4  &hml LEFT_GUI NUMBER_5  &hml LEFT_SHIFT NUMBER_6  &none            &kp F11     &hmr LEFT_SHIFT F4  &hmr LEFT_WIN F5  &hmr LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
+&kp RALT  &kp LEFT_CONTROL  &hm_r LEFT_ALT NUMBER_4  &hm_s LEFT_GUI NUMBER_5  &hm_t LEFT_SHIFT NUMBER_6  &none            &kp F11     &hm_n LEFT_SHIFT F4  &hm_e LEFT_WIN F5  &hm_i LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
 &none     &kp COMMA         &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3              &none            &kp F10     &kp F1              &kp F2            &kp F3            &kp DOT           &kp DELETE
                                                     &kp NUMBER_0            &kp SPACE                 &kp BACKSPACE    &kp ESCAPE  &kp ENTER           &kp DELETE
             >;
