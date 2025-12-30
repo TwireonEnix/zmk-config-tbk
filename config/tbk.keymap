@@ -40,6 +40,7 @@
            /* ---------- Homerow Mods (Canary) ---------- */
     hm_base: hm_base {
       compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>
       bindings = <&kp>, <&kp>;
       tapping-term-ms = <185>;
       quick-tap-ms = <135>;
