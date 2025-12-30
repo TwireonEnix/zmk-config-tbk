@@ -46,6 +46,7 @@
       tapping-term-ms = <185>;
       quick-tap-ms = <135>;
       flavor = "balanced";
+      require-prior-idle-ms = <125>;
       hold-trigger-on-release;
     };
 
@@ -57,6 +58,7 @@
       quick-tap-ms = <135>;
       flavor = "balanced";
       hold-trigger-on-release;
+      require-prior-idle-ms = <125>;
         hold-trigger-key-positions = <15 17 18 19 28 29 30 31 32 33 34>; 
         };
 
@@ -68,6 +70,7 @@
       quick-tap-ms = <135>;
       flavor = "balanced";
       hold-trigger-on-release;
+      require-prior-idle-ms = <125>;
         hold-trigger-key-positions = <15 16 18 19 28 29 30 31 32 33 34>; 
         };
 
@@ -79,6 +82,7 @@
       quick-tap-ms = <135>;
       flavor = "balanced";
       hold-trigger-on-release;
+      require-prior-idle-ms = <125>;
       hold-trigger-key-positions = <15 16 17 19 28 29 30 31 32 33 34>; 
       };
 
@@ -90,6 +94,7 @@
       quick-tap-ms = <135>;
       flavor = "balanced";
       hold-trigger-on-release;
+      require-prior-idle-ms = <125>;
       hold-trigger-key-positions = <24 25 26 35 36 37 38 39 40 41>; 
       };
 
@@ -101,6 +106,7 @@
       quick-tap-ms = <135>;
       flavor = "balanced";
       hold-trigger-on-release;
+      require-prior-idle-ms = <125>;
       hold-trigger-key-positions = <23 25 26 35 36 37 38 39 40 41>; 
       };
 
@@ -112,6 +118,7 @@
       quick-tap-ms = <135>;
       flavor = "balanced";
       hold-trigger-on-release;
+      require-prior-idle-ms = <125>;
        hold-trigger-key-positions = <23 24 26 35 36 37 38 39 40 41>; 
        };
 
@@ -123,6 +130,7 @@
       quick-tap-ms = <135>;
       flavor = "balanced";
       hold-trigger-on-release;
+      require-prior-idle-ms = <125>;
       hold-trigger-key-positions = <23 24 25 35 36 37 38 39 40 41>;
        };
 
