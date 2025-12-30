@@ -59,7 +59,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <135>;
         flavor = "balanced";
-        positional-hold;
+        hold-trigger-on-release;
         hold-trigger-key-positions = <16 17 18 19 28 29 30 31 32 33 34>;
         };
 
@@ -70,7 +70,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <135>;
         flavor = "balanced";
-        positional-hold;
+        hold-trigger-on-release;
         hold-trigger-key-positions = <15 17 18 19 28 29 30 31 32 33 34>;
         };
 
@@ -81,7 +81,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <135>;
         flavor = "balanced";
-        positional-hold;
+        hold-trigger-on-release;
         hold-trigger-key-positions = <15 16 18 19 28 29 30 31 32 33 34>;
         };
 
@@ -92,7 +92,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <135>;
         flavor = "balanced";
-        positional-hold;
+        hold-trigger-on-release;
         hold-trigger-key-positions = <15 16 17 19 28 29 30 31 32 33 34>;
         };
 
@@ -103,7 +103,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <135>;
         flavor = "balanced";
-        positional-hold;
+        hold-trigger-on-release;
         hold-trigger-key-positions = <24 25 26 35 36 37 38 39 40 41>;
         };
 
@@ -114,7 +114,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <135>;
         flavor = "balanced";
-        positional-hold;
+        hold-trigger-on-release;
         hold-trigger-key-positions = <23 25 26 35 36 37 38 39 40 41>;
         };
 
@@ -125,7 +125,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <135>;
         flavor = "balanced";
-        positional-hold;
+        hold-trigger-on-release;
         hold-trigger-key-positions = <23 24 26 35 36 37 38 39 40 41>;
         };
 
@@ -136,7 +136,7 @@
         tapping-term-ms = <185>;
         quick-tap-ms = <135>;
         flavor = "balanced";
-        positional-hold;
+        hold-trigger-on-release;
         hold-trigger-key-positions = <23 24 25 35 36 37 38 39 40 41>;
         };
 
@@ -251,7 +251,7 @@
 &to 1   &trans           &trans    &trans    &trans    &trans            &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI     &trans
 &trans  &msc SCRL_RIGHT  &mkp MB3  &mkp MB2  &mkp MB1  &msc SCRL_LEFT    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
 &trans  &trans           &trans    &mkp MB4  &mkp MB5  &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-                                   &trans    &trans    &trans            &trans  &trans          &trans
+                                   &trans    &trans    &trans             &trans  &trans          &trans
             >;
 
             display-name = "MOUSE";
