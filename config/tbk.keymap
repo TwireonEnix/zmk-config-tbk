@@ -59,7 +59,7 @@
       hold-trigger-on-release;
         hold-trigger-key-positions = <15 17 18 19 28 29 30 31 32 33 34>; 
         };
-        
+
     hm_s: hm_s {
                compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
@@ -130,7 +130,7 @@
     to_fast: to_fast {
       compatible = "zmk,behavior-hold-tap";
       #binding-cells = <2>;
-      bindings = <&to>, <&kp>;
+      bindings = <&mo>, <&kp>;
       tapping-term-ms = <260>;
       flavor = "tap-preferred";
       hold-trigger-on-release;
@@ -161,19 +161,19 @@
         MAC {
             display-name = "MAC";
             bindings = <
-&kp LC(UP_ARROW)       &kp Q                &kp L            &kp Y            &kp P              &kp B            &kp Z         &kp F              &kp O            &kp U            &kp SLASH             &kp LG(SPACE)
+&kp LC(UP_ARROW)       &kp Q                &kp L            &kp Y            &kp P              &mt LG(X) B            &kp Z         &kp F              &kp O            &kp U            &kp SLASH             &kp LG(SPACE)
 &kp RIGHT_ALT          &hm_c LEFT_CONTROL C  &hm_r LEFT_ALT R  &hm_s LEFT_GUI S  &hm_t LEFT_SHIFT T  &kp G            &kp M         &hm_n LEFT_SHIFT N  &hm_e LEFT_GUI E  &hm_i LEFT_ALT I  &hm_a_r LEFT_CONTROL A   &kp SINGLE_QUOTE
 &toWinModTap 0 ESCAPE  &kp W                &mt LG(X) J      &mt LG(C) V      &mt LG(V) D        &kp K            &kp X         &kp H              &kp COLON        &kp COMMA        &kp PERIOD            &mt LG(Q) DELETE
-                                                             &to_fast 5 TAB        &to_fast 7 SPACE        &mt LG(Z) BACKSPACE    &to_fast 3 ESCAPE  &to_fast 6 ENTER        &kp DELETE
+                                                             &to_fast 5 TAB        &to_fast 7 SPACE        &kp BACKSPACE    &to_fast 3 ESCAPE  &to_fast 6 ENTER        &kp DELETE
             >;
         };
 
         WIN {
             bindings = <
-&kp LG(TAB)             &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &kp SLASH             &kp LA(SPACE)
+&kp LG(TAB)             &kp Q            &kp L            &kp Y                &kp P              &mt LC(X) B            &kp Z         &kp F              &kp O                &kp U            &kp SLASH             &kp LA(SPACE)
 &kp RIGHT_ALT          &hm_c LEFT_GUI C  &hm_r LEFT_ALT R  &hm_s LEFT_CONTROL S  &hm_t LEFT_SHIFT T  &kp G            &kp M         &hm_n LEFT_SHIFT N  &hm_e LEFT_CONTROL E  &hm_i LEFT_ALT I  &hm_a_r LEFT_GUI A   &kp SINGLE_QUOTE
 &toMacModTap 0 ESCAPE   &kp W            &mt LC(X) J      &mt LC(C) V          &mt LC(V) D        &kp K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD            &mt LA(F4) DELETE
-                                                          &to_fast 4 TAB            &to_fast 7 SPACE        &mt LC(Z) BACKSPACE    &to_fast 2 ESCAPE  &to_fast 6 ENTER        &kp DELETE
+                                                          &to_fast 4 TAB            &to_fast 7 SPACE        &kp BACKSPACE    &to_fast 2 ESCAPE  &to_fast 6 ENTER        &kp DELETE
             >;
 
             display-name = "WIN";
