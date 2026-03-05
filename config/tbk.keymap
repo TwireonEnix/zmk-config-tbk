@@ -37,123 +37,133 @@
     };
 
     behaviors {
+        hm_c: hm_c {
+            hold-trigger-key-positions = <16 17 18 19 28 29 30 31 32 33 34>;
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
 
-    hm_c: hm_c { 
-        hold-trigger-key-positions = <16 17 18 19 28 29 30 31 32 33 34>; 
-        compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <135>;
-      flavor = "balanced";
-      require-prior-idle-ms = <125>;
-      hold-trigger-on-release;
-    };
-
-    hm_r: hm_r { 
-         compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <135>;
-      flavor = "balanced";
-      hold-trigger-on-release;
-      require-prior-idle-ms = <125>;
-        hold-trigger-key-positions = <15 17 18 19 28 29 30 31 32 33 34>; 
+            tapping-term-ms = <185>;
+            quick-tap-ms = <135>;
+            flavor = "balanced";
+            require-prior-idle-ms = <125>;
+            hold-trigger-on-release;
         };
 
-    hm_s: hm_s {
-               compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <135>;
-      flavor = "balanced";
-      hold-trigger-on-release;
-      require-prior-idle-ms = <125>;
-        hold-trigger-key-positions = <15 16 18 19 28 29 30 31 32 33 34>; 
+        hm_r: hm_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <185>;
+            quick-tap-ms = <135>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <15 17 18 19 28 29 30 31 32 33 34>;
         };
 
-    hm_t: hm_t { 
-               compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <135>;
-      flavor = "balanced";
-      hold-trigger-on-release;
-      require-prior-idle-ms = <125>;
-      hold-trigger-key-positions = <15 16 17 19 28 29 30 31 32 33 34>; 
-      };
+        hm_s: hm_s {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
 
-    hm_n: hm_n { 
-               compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <135>;
-      flavor = "balanced";
-      hold-trigger-on-release;
-      require-prior-idle-ms = <125>;
-      hold-trigger-key-positions = <24 25 26 35 36 37 38 39 40 41>; 
-      };
+            tapping-term-ms = <185>;
+            quick-tap-ms = <135>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <15 16 18 19 28 29 30 31 32 33 34>;
+        };
 
-    hm_e: hm_e { 
-               compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <135>;
-      flavor = "balanced";
-      hold-trigger-on-release;
-      require-prior-idle-ms = <125>;
-      hold-trigger-key-positions = <23 25 26 35 36 37 38 39 40 41>; 
-      };
+        hm_t: hm_t {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
 
-    hm_i: hm_i {
-               compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <135>;
-      flavor = "balanced";
-      hold-trigger-on-release;
-      require-prior-idle-ms = <125>;
-       hold-trigger-key-positions = <23 24 26 35 36 37 38 39 40 41>; 
-       };
+            tapping-term-ms = <185>;
+            quick-tap-ms = <135>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <15 16 17 19 28 29 30 31 32 33 34>;
+        };
 
-    hm_a_r: hm_a_r { 
-               compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&kp>, <&kp>;
-      tapping-term-ms = <185>;
-      quick-tap-ms = <135>;
-      flavor = "balanced";
-      hold-trigger-on-release;
-      require-prior-idle-ms = <125>;
-      hold-trigger-key-positions = <23 24 25 35 36 37 38 39 40 41>;
-       };
+        hm_n: hm_n {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
 
-    /* ---------- Safe layer toggles ---------- */
-    to_fast: to_fast {
-      compatible = "zmk,behavior-hold-tap";
-      #binding-cells = <2>;
-      bindings = <&mo>, <&kp>;
-      tapping-term-ms = <260>;
-      flavor = "tap-preferred";
-      hold-trigger-on-release;
-    };
+            tapping-term-ms = <185>;
+            quick-tap-ms = <135>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <24 25 26 35 36 37 38 39 40 41>;
+        };
 
-    mt_fast: mt_fast {
-  compatible = "zmk,behavior-hold-tap";
-  #binding-cells = <2>;
-  bindings = <&kp>, <&kp>;
-  tapping-term-ms = <175>;
-  quick-tap-ms = <130>;
-  require-prior-idle-ms = <125>;
-  flavor = "balanced";
-  hold-trigger-on-release;
-};
+        hm_e: hm_e {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <185>;
+            quick-tap-ms = <135>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <23 25 26 35 36 37 38 39 40 41>;
+        };
+
+        hm_i: hm_i {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <185>;
+            quick-tap-ms = <135>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <23 24 26 35 36 37 38 39 40 41>;
+        };
+
+        hm_a_r: hm_a_r {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <185>;
+            quick-tap-ms = <135>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <23 24 25 35 36 37 38 39 40 41>;
+        };
+
+        /* ---------- Safe layer toggles ---------- */
+
+        to_fast: to_fast {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+
+            tapping-term-ms = <260>;
+            flavor = "tap-preferred";
+            hold-trigger-on-release;
+        };
+
+        mt_fast: mt_fast {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+
+            tapping-term-ms = <175>;
+            quick-tap-ms = <130>;
+            require-prior-idle-ms = <125>;
+            flavor = "balanced";
+            hold-trigger-on-release;
+        };
 
         toMacModTap: toMacModTap {
             compatible = "zmk,behavior-hold-tap";
@@ -170,7 +180,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
-            flavor = "tap-preferred"; 
+            flavor = "tap-preferred";
         };
     };
 
@@ -180,19 +190,19 @@
         MAC {
             display-name = "MAC";
             bindings = <
-&kp LC(UP_ARROW)       &kp Q                &kp L            &kp Y            &kp P              &kp B            &kp Z         &kp F              &kp O            &kp U            &kp SLASH             &kp LG(SPACE)
-&kp RIGHT_ALT          &hm_c LEFT_CONTROL C  &hm_r LEFT_ALT R  &hm_s LEFT_GUI S  &hm_t LEFT_SHIFT T  &kp G            &kp M         &hm_n LEFT_SHIFT N  &hm_e LEFT_GUI E  &hm_i LEFT_ALT I  &hm_a_r LEFT_CONTROL A   &kp SINGLE_QUOTE
-&toWinModTap 0 ESCAPE  &kp W                &mt_fast LG(X) J      &mt_fast LG(C) V      &mt_fast LG(V) D        &mt_fast LG(Z) K            &kp X         &kp H              &kp COLON        &kp COMMA        &kp PERIOD            &mt LG(Q) DELETE
-                                                             &to_fast 5 TAB        &to_fast 7 SPACE        &kp BACKSPACE    &to_fast 3 ESCAPE  &to_fast 6 ENTER        &kp DELETE
+&kp LC(UP_ARROW)       &kp Q                 &kp L             &kp Y             &kp P               &kp B               &kp Z       &kp F               &kp O              &kp U             &kp SLASH               &kp LG(SPACE)
+&kp RIGHT_ALT          &hm_c LEFT_CONTROL C  &hm_r LEFT_ALT R  &hm_s LEFT_GUI S  &hm_t LEFT_SHIFT T  &kp G               &kp M       &hm_n LEFT_SHIFT N  &hm_e LEFT_GUI E   &hm_i LEFT_ALT I  &hm_a_r LEFT_CONTROL A  &kp SINGLE_QUOTE
+&toWinModTap 0 ESCAPE  &kp W                 &mt_fast LG(X) J  &mt_fast LG(C) V  &mt_fast LG(V) D    &mt_fast LG(Z) K    &kp X       &kp H               &kp COLON          &kp COMMA         &kp PERIOD              &mt LG(Q) DELETE
+                                                               &to_fast 5 TAB    &to_fast 7 SPACE    &kp BACKSPACE       &kp ESCAPE  &to_fast 3 ENTER    &to_fast 6 DELETE
             >;
         };
 
         WIN {
             bindings = <
-&kp LG(TAB)             &kp Q            &kp L            &kp Y                &kp P              &kp B            &kp Z         &kp F              &kp O                &kp U            &kp SLASH             &kp LA(SPACE)
-&kp RIGHT_ALT          &hm_c LEFT_GUI C  &hm_r LEFT_ALT R  &hm_s LEFT_CONTROL S  &hm_t LEFT_SHIFT T  &kp G            &kp M         &hm_n LEFT_SHIFT N  &hm_e LEFT_CONTROL E  &hm_i LEFT_ALT I  &hm_a_r LEFT_GUI A   &kp SINGLE_QUOTE
-&toMacModTap 0 ESCAPE   &kp W            &mt_fast LC(X) J      &mt_fast LC(C) V          &mt_fast LC(V) D        &mt_fast LC(Z) K            &kp X         &kp H              &kp COLON            &kp COMMA        &kp PERIOD            &mt LA(F4) DELETE
-                                                          &to_fast 4 TAB            &to_fast 7 SPACE        &kp BACKSPACE    &to_fast 2 ESCAPE  &to_fast 6 ENTER        &kp DELETE
+&kp LG(TAB)            &kp Q             &kp L             &kp Y                 &kp P               &kp B               &kp Z       &kp F               &kp O                 &kp U             &kp SLASH           &kp LA(SPACE)
+&kp RIGHT_ALT          &hm_c LEFT_GUI C  &hm_r LEFT_ALT R  &hm_s LEFT_CONTROL S  &hm_t LEFT_SHIFT T  &kp G               &kp M       &hm_n LEFT_SHIFT N  &hm_e LEFT_CONTROL E  &hm_i LEFT_ALT I  &hm_a_r LEFT_GUI A  &kp SINGLE_QUOTE
+&toMacModTap 0 ESCAPE  &kp W             &mt_fast LC(X) J  &mt_fast LC(C) V      &mt_fast LC(V) D    &mt_fast LC(Z) K    &kp X       &kp H               &kp COLON             &kp COMMA         &kp PERIOD          &mt LA(F4) DELETE
+                                                           &to_fast 4 TAB        &to_fast 7 SPACE    &kp BACKSPACE       &kp ESCAPE  &to_fast 2 ENTER    &to_fast 6 DELETE
             >;
 
             display-name = "WIN";
@@ -200,10 +210,10 @@
 
         NUMBERS {
             bindings = <
-&none     &none         &kp NUMBER_7            &kp NUMBER_8                &kp NUMBER_9              &none            &kp F12  &kp F7              &kp F8                &kp F9            &none         &none
+&none     &none         &kp NUMBER_7             &kp NUMBER_8                 &kp NUMBER_9               &none            &kp F12  &kp F7               &kp F8                 &kp F9             &none         &none
 &kp RALT  &kp LEFT_GUI  &hm_r LEFT_ALT NUMBER_4  &hm_s LEFT_CONTROL NUMBER_5  &hm_t LEFT_SHIFT NUMBER_6  &none            &kp F11  &hm_n LEFT_SHIFT F4  &hm_e LEFT_CONTROL F5  &hm_i LEFT_ALT F6  &kp LEFT_GUI  &kp RALT
-&none     &kp COMMA     &kp NUMBER_1            &kp NUMBER_2                &kp NUMBER_3              &none            &kp F10  &kp F1              &kp F2                &kp F3            &kp DOT       &kp DELETE
-                                                &kp NUMBER_0                &kp SPACE                 &kp BACKSPACE    &trans   &kp ENTER           &kp DELETE
+&none     &kp COMMA     &kp NUMBER_1             &kp NUMBER_2                 &kp NUMBER_3               &none            &kp F10  &kp F1               &kp F2                 &kp F3             &kp DOT       &kp DELETE
+                                                 &kp NUMBER_0                 &kp SPACE                  &kp BACKSPACE    &trans   &kp ENTER            &kp DELETE
             >;
 
             display-name = "NUM";
@@ -212,10 +222,10 @@
         NUM_MAC {
             display-name = "NUM_MC";
             bindings = <
-&none     &none             &kp NUMBER_7            &kp NUMBER_8            &kp NUMBER_9              &none            &kp F12     &kp F7              &kp F8            &kp F9            &none             &none
+&none     &none             &kp NUMBER_7             &kp NUMBER_8             &kp NUMBER_9               &none            &kp F12     &kp F7               &kp F8             &kp F9             &none             &none
 &kp RALT  &kp LEFT_CONTROL  &hm_r LEFT_ALT NUMBER_4  &hm_s LEFT_GUI NUMBER_5  &hm_t LEFT_SHIFT NUMBER_6  &none            &kp F11     &hm_n LEFT_SHIFT F4  &hm_e LEFT_WIN F5  &hm_i LEFT_ALT F6  &kp LEFT_CONTROL  &kp RALT
-&none     &kp COMMA         &kp NUMBER_1            &kp NUMBER_2            &kp NUMBER_3              &none            &kp F10     &kp F1              &kp F2            &kp F3            &kp DOT           &kp DELETE
-                                                    &kp NUMBER_0            &kp SPACE                 &kp BACKSPACE    &kp ESCAPE  &kp ENTER           &kp DELETE
+&none     &kp COMMA         &kp NUMBER_1             &kp NUMBER_2             &kp NUMBER_3               &none            &kp F10     &kp F1               &kp F2             &kp F3             &kp DOT           &kp DELETE
+                                                     &kp NUMBER_0             &kp SPACE                  &kp BACKSPACE    &kp ESCAPE  &kp ENTER            &kp DELETE
             >;
         };
 
@@ -242,10 +252,10 @@
 
         SYMBOLS {
             bindings = <
-&kp LEFT_GUI                       &kp RA(SLASH)  &kp ASTRK        &kp MINUS             &kp PLUS               &kp AT           &kp PIPE   &kp AMPERSAND   &kp PERCENT       &kp CARET   &upDirectory       &kp LEFT_GUI
-&kp LSHFT                          &kp TILDE      &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL        &kp GRAVE  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &kp LEFT_SHIFT
-&mt RA(NUMBER_1) RA(LS(NUMBER_1))  &kp BACKSLASH  &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE        &kp HASH   &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp RA(N5)         &bt BT_NXT
-                                                                   &jsfn                 &kp SPACE              &kp BACKSPACE    &trans     &trans          &trans
+&kp LEFT_GUI                       &kp RA(SLASH)  &kp ASTRK        &kp MINUS             &kp PLUS               &kp AT            &kp PIPE   &kp AMPERSAND   &kp PERCENT       &kp CARET   &upDirectory       &kp LEFT_GUI
+&kp LG(LSHFT)                      &kp TILDE      &kp QUESTION     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp EQUAL         &kp GRAVE  &kp LEFT_BRACE  &kp RIGHT_BRACE   &kp DOLLAR  &kp DOUBLE_QUOTES  &kp LC(LEFT_SHIFT)
+&mt RA(NUMBER_1) RA(LS(NUMBER_1))  &kp BACKSLASH  &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp UNDERSCORE    &kp HASH   &kp LESS_THAN   &kp GREATER_THAN  &kp SEMI    &kp RA(N5)         &jsfn
+                                                                   &none                 &kp SPACE              &kp BACKSPACE     &trans     &trans          &trans
             >;
 
             display-name = "SYMB";
@@ -253,24 +263,13 @@
 
         MOUSE {
             bindings = <
-&to 1   &trans           &trans    &trans    &trans    &trans            &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI     &trans
-&trans  &msc SCRL_RIGHT  &mkp MB3  &mkp MB2  &mkp MB1  &msc SCRL_LEFT    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
-&trans  &trans           &trans    &mkp MB4  &mkp MB5  &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &trans
-                                   &trans    &trans    &trans             &trans  &trans          &trans
+&trans          &trans           &trans    &trans    &trans    &trans            &trans  &kp LEFT_SHIFT  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LEFT_GUI     &bt BT_NXT
+&trans          &msc SCRL_RIGHT  &mkp MB3  &mkp MB2  &mkp MB1  &msc SCRL_LEFT    &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN    &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans
+&bt BT_CLR_ALL  &trans           &trans    &mkp MB4  &mkp MB5  &trans            &trans  &kp LEFT_ARROW  &kp DOWN_ARROW    &kp UP_ARROW  &kp RIGHT_ARROW  &trans
+                                           &trans    &trans    &trans            &trans  &trans          &trans
             >;
 
             display-name = "MOUSE";
-        };
-
-        bt {
-            bindings = <
-&bt BT_CLR_ALL  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans    &trans  &trans  &trans
-            >;
-
-            display-name = "BT";
         };
     };
 };
