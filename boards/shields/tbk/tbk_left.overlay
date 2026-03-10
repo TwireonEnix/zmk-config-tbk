@@ -44,14 +44,10 @@ nice_view_spi: &spi1 {
     pinctrl-1 = <&spi1_sleep>;
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 6 GPIO_ACTIVE_HIGH>;  /* D1 */
+};
 
-    nice_view: ls011b7dh03@0 {
-        compatible = "sharp,ls011b7dh03";
-        label = "DISPLAY";
-        reg = <0>;
-        spi-max-frequency = <2000000>;
-        rotation = <180>;         
-    };
+&nice_view {
+    rotation = <180>;
 };
 
 / {
