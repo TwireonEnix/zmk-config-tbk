@@ -1,0 +1,346 @@
+layout: {zmk_keyboard: tbk}
+layers:
+  MAC:
+  - Ctl+UP ARROW
+  - Q
+  - L
+  - Y
+  - P
+  - B
+  - Z
+  - F
+  - O
+  - U
+  - /
+  - Gui+SPACE
+  - RIGHT ALT
+  - {t: C, h: LEFT CONTROL}
+  - {t: R, h: LEFT ALT}
+  - {t: S, h: LEFT GUI}
+  - {t: T, h: LEFT SHIFT}
+  - G
+  - M
+  - {t: N, h: LEFT SHIFT}
+  - {t: E, h: LEFT GUI}
+  - {t: I, h: LEFT ALT}
+  - {t: A, h: LEFT CONTROL}
+  - ''''
+  - {t: ESCAPE, h: '&toWin'}
+  - W
+  - {t: J, h: Gui+X}
+  - {t: V, h: Gui+C}
+  - {t: D, h: Gui+V}
+  - {t: K, h: Gui+Z}
+  - X
+  - H
+  - ':'
+  - ','
+  - .
+  - {t: DELETE, h: Gui+Q}
+  - {t: TAB, h: NAV_MAC}
+  - {t: SPACE, h: MOUSE}
+  - BACKSPACE
+  - ESCAPE
+  - {t: ENTER, h: SYMB}
+  - {t: DELETE, h: NUM_MC}
+  WIN:
+  - Gui+TAB
+  - Q
+  - L
+  - Y
+  - P
+  - B
+  - Z
+  - F
+  - O
+  - U
+  - /
+  - Alt+SPACE
+  - RIGHT ALT
+  - {t: C, h: LEFT GUI}
+  - {t: R, h: LEFT ALT}
+  - {t: S, h: LEFT CONTROL}
+  - {t: T, h: LEFT SHIFT}
+  - G
+  - M
+  - {t: N, h: LEFT SHIFT}
+  - {t: E, h: LEFT CONTROL}
+  - {t: I, h: LEFT ALT}
+  - {t: A, h: LEFT GUI}
+  - ''''
+  - {t: ESCAPE, h: '&toMac'}
+  - W
+  - {t: J, h: Ctl+X}
+  - {t: V, h: Ctl+C}
+  - {t: D, h: Ctl+V}
+  - {t: K, h: Ctl+Z}
+  - X
+  - H
+  - ':'
+  - ','
+  - .
+  - {t: DELETE, h: Alt+F4}
+  - {t: TAB, h: NAV}
+  - {t: SPACE, h: MOUSE}
+  - BACKSPACE
+  - ESCAPE
+  - {t: ENTER, h: SYMB}
+  - {t: DELETE, h: NUM}
+  NUM:
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - ''
+  - F12
+  - F7
+  - F8
+  - F9
+  - ''
+  - ''
+  - RALT
+  - LEFT GUI
+  - {t: '4', h: LEFT ALT}
+  - {t: '5', h: LEFT CONTROL}
+  - {t: '6', h: LEFT SHIFT}
+  - ''
+  - F11
+  - {t: F4, h: LEFT SHIFT}
+  - {t: F5, h: LEFT CONTROL}
+  - {t: F6, h: LEFT ALT}
+  - LEFT GUI
+  - RALT
+  - ''
+  - ','
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - F10
+  - F1
+  - F2
+  - F3
+  - .
+  - DELETE
+  - '0'
+  - SPACE
+  - BACKSPACE
+  - ESCAPE
+  - ENTER
+  - {t: DELETE, type: held}
+  NUM_MC:
+  - ''
+  - ''
+  - '7'
+  - '8'
+  - '9'
+  - ''
+  - F12
+  - F7
+  - F8
+  - F9
+  - ''
+  - ''
+  - RALT
+  - LEFT CONTROL
+  - {t: '4', h: LEFT ALT}
+  - {t: '5', h: LEFT GUI}
+  - {t: '6', h: LEFT SHIFT}
+  - ''
+  - F11
+  - {t: F4, h: LEFT SHIFT}
+  - {t: F5, h: LEFT WIN}
+  - {t: F6, h: LEFT ALT}
+  - LEFT CONTROL
+  - RALT
+  - ''
+  - ','
+  - '1'
+  - '2'
+  - '3'
+  - ''
+  - F10
+  - F1
+  - F2
+  - F3
+  - .
+  - DELETE
+  - '0'
+  - SPACE
+  - BACKSPACE
+  - ESCAPE
+  - ENTER
+  - {t: DELETE, type: held}
+  NAV:
+  - ''
+  - Gui+LEFT ARROW
+  - Gui+RIGHT ARROW
+  - VOL DN
+  - VOLUME UP
+  - ''
+  - Sft+Gui+LEFT
+  - INSERT
+  - PAGE DOWN
+  - PAGE UP
+  - ''
+  - Gui+Sft+RIGHT
+  - RALT
+  - LEFT GUI
+  - LALT
+  - LCTRL
+  - LSHFT
+  - Gui+Sft+S
+  - Gui+LEFT ARROW
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT
+  - Gui+RIGHT
+  - ''
+  - ''
+  - PREVIOUS
+  - PLAY PAUSE
+  - AC FORWARD
+  - Sft+TAB
+  - ''
+  - Gui+UP ARROW
+  - HOME
+  - END
+  - Gui+Sft+DOWN ARROW
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  - ''
+  - '&caps_word'
+  - ENTER
+  - DELETE
+  NAV_MAC:
+  - ''
+  - Gui+LEFT ARROW
+  - Gui+RIGHT ARROW
+  - VOL DN
+  - VOLUME UP
+  - ''
+  - Alt+Ctl+Gui+LEFT
+  - INSERT
+  - PAGE DOWN
+  - PAGE UP
+  - Ctl+Alt+C
+  - Alt+Ctl+Gui+RIGHT
+  - RALT
+  - LEFT CONTROL
+  - LALT
+  - LEFT GUI
+  - LSHFT
+  - Gui+Sft+Ctl+4
+  - Alt+Ctl+LEFT ARROW
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT
+  - Ctl+Alt+RIGHT
+  - BRIGHTNESS DEC
+  - BRIGHTNESS INC
+  - PREVIOUS
+  - PLAY PAUSE
+  - AC FORWARD
+  - Sft+TAB
+  - ''
+  - Ctl+Alt+ENTER
+  - HOME
+  - END
+  - Ctl+Alt+BACKSPACE
+  - {t: ▽, type: trans}
+  - {type: held}
+  - ''
+  - ''
+  - '&caps_word'
+  - ENTER
+  - DELETE
+  SYMB:
+  - LEFT GUI
+  - AltGr+/
+  - '*'
+  - '-'
+  - +
+  - '@'
+  - '|'
+  - '&'
+  - '%'
+  - ^
+  - '&upDirectory'
+  - LEFT GUI
+  - Gui+LSHFT
+  - '~'
+  - '?'
+  - (
+  - )
+  - '='
+  - '`'
+  - '{'
+  - '}'
+  - $
+  - '"'
+  - Ctl+LEFT SHIFT
+  - {t: AltGr+Sft+1, h: AltGr+1}
+  - \
+  - '!'
+  - '['
+  - ']'
+  - _
+  - '#'
+  - <
+  - '>'
+  - ;
+  - AltGr+5
+  - '&jsfn'
+  - ''
+  - SPACE
+  - BACKSPACE
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  MOUSE:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT SHIFT
+  - LEFT CONTROL
+  - LEFT ALT
+  - LEFT GUI
+  - BT NXT
+  - {t: ▽, type: trans}
+  - '&msc SCRL_RIGHT'
+  - '&mkp MB3'
+  - '&mkp MB2'
+  - '&mkp MB1'
+  - '&msc SCRL_LEFT'
+  - {t: ▽, type: trans}
+  - '&mmv MOVE_LEFT'
+  - '&mmv MOVE_DOWN'
+  - '&mmv MOVE_UP'
+  - '&mmv MOVE_RIGHT'
+  - {t: ▽, type: trans}
+  - BT CLR ALL
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&mkp MB4'
+  - '&mkp MB5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT ARROW
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
