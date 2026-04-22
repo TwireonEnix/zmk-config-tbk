@@ -138,7 +138,7 @@
 &kp LC(UP_ARROW)       &kp Q                &kp L             &kp Y             &kp P              &kp B               &kp Z       &kp F              &kp O             &kp U             &kp SLASH              &kp LG(SPACE)
 &kp RIGHT_ALT          &hml LEFT_CONTROL C  &hml LEFT_ALT R   &hml LEFT_GUI S   &hml LEFT_SHIFT T  &kp G               &kp M       &hmr LEFT_SHIFT N  &hmr LEFT_GUI E   &hmr LEFT_ALT I   &hmr LEFT_CONTROL A    &kp SINGLE_QUOTE
 &toWinModTap 0 ESCAPE  &kp W                &mt_fast LG(X) J  &mt_fast LG(C) V  &mt_fast LG(V) D   &mt_fast LG(Z) K    &kp X       &kp H              &kp COLON         &kp COMMA         &kp PERIOD             &mt LG(Q) DELETE
-                                                              &kp TAB    &to_fast 5 SPACE   &to_fast 7 BACKSPACE       &to_fast 6 ESCAPE  &to_fast 3 ENTER   &kp DELETE
+                                                              &to_fast 7 TAB    &to_fast 5 SPACE   &kp BACKSPACE       &to_fast 6 ESCAPE  &to_fast 3 ENTER   &kp DELETE
             >;
         };
 
@@ -148,7 +148,7 @@
 &kp LG(TAB)            &kp Q                &kp L             &kp Y                  &kp P              &kp B               &kp Z       &kp F              &kp O                  &kp U             &kp SLASH          &kp LA(SPACE)
 &kp RIGHT_ALT          &hml LEFT_GUI C      &hml LEFT_ALT R   &hml LEFT_CONTROL S    &hml LEFT_SHIFT T  &kp G               &kp M       &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E    &hmr LEFT_ALT I   &hmr LEFT_GUI A    &kp SINGLE_QUOTE
 &toMacModTap 0 ESCAPE  &kp W                &mt_fast LC(X) J  &mt_fast LC(C) V       &mt_fast LC(V) D   &mt_fast LC(Z) K    &kp X       &kp H              &kp COLON              &kp COMMA         &kp PERIOD         &mt LA(F4) DELETE
-                                                              &kp TAB         &to_fast 4 SPACE   &to_fast 7 BACKSPACE       &to_fast 6 ESCAPE  &to_fast 2 ENTER   &kp DELETE
+                                                              &to_fast 7 TAB         &to_fast 4 SPACE   &kp BACKSPACE       &to_fast 6 ESCAPE  &to_fast 2 ENTER   &kp DELETE
             >;
         };
 
