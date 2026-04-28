@@ -146,7 +146,7 @@
             display-name = "WIN";
             bindings = <
 &kp LG(TAB)            &kp Q                &kp L             &kp Y                  &kp P              &kp B               &kp Z       &kp F              &kp O                  &kp U             &kp SLASH          &kp LA(SPACE)
-&kp RIGHT_ALT          &hml LEFT_GUI C      &hml LEFT_ALT R   &hml LEFT_CONTROL S    &hml LEFT_SHIFT T  &kp G               &kp M       &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E    &hmr LEFT_ALT I   &hmr LEFT_GUI A    &kp SINGLE_QUOTE
+&kp RIGHT_ALT          &hml LEFT_GUI C      &hml LEFT_ALT R   &hml LEFT_CONTROL S    &hml LEFT_SHIFT T  &hml LS(LC(LA(LGUI))) G               &hmr LS(LC(LA(LGUI))) M       &hmr LEFT_SHIFT N  &hmr LEFT_CONTROL E    &hmr LEFT_ALT I   &hmr LEFT_GUI A    &kp SINGLE_QUOTE
 &toMacModTap 0 ESCAPE  &kp W                &mt_fast LC(X) J  &mt_fast LC(C) V       &mt_fast LC(V) D   &mt_fast LC(Z) K    &kp X       &kp H              &kp COLON              &kp COMMA         &kp PERIOD         &mt LA(F4) DELETE
                                                               &to_fast 7 TAB         &to_fast 4 SPACE   &kp BACKSPACE       &kp ESCAPE  &to_fast 2 ENTER   &to_fast 6 DELETE
             >;
