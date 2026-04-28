@@ -18,8 +18,8 @@ layers:
   - {t: R, h: LEFT ALT}
   - {t: S, h: LEFT GUI}
   - {t: T, h: LEFT SHIFT}
-  - G
-  - M
+  - {t: G, h: Meh+LGUI}
+  - {t: M, h: Meh+LGUI}
   - {t: N, h: LEFT SHIFT}
   - {t: E, h: LEFT GUI}
   - {t: I, h: LEFT ALT}
@@ -37,12 +37,12 @@ layers:
   - ','
   - .
   - {t: DELETE, h: Gui+Q}
-  - {t: TAB, h: NAV_MAC}
-  - {t: SPACE, h: MOUSE}
+  - {t: TAB, h: MOUSE}
+  - {t: SPACE, h: NAV_MAC}
   - BACKSPACE
   - ESCAPE
-  - {t: ENTER, h: SYMB}
-  - {t: DELETE, h: NUM_MC}
+  - {t: ENTER, h: NUM_MC}
+  - {t: DELETE, h: SYMB}
   WIN:
   - Gui+TAB
   - Q
@@ -61,8 +61,8 @@ layers:
   - {t: R, h: LEFT ALT}
   - {t: S, h: LEFT CONTROL}
   - {t: T, h: LEFT SHIFT}
-  - G
-  - M
+  - {t: G, h: Meh+LGUI}
+  - {t: M, h: Meh+LGUI}
   - {t: N, h: LEFT SHIFT}
   - {t: E, h: LEFT CONTROL}
   - {t: I, h: LEFT ALT}
@@ -80,12 +80,12 @@ layers:
   - ','
   - .
   - {t: DELETE, h: Alt+F4}
-  - {t: TAB, h: NAV}
-  - {t: SPACE, h: MOUSE}
+  - {t: TAB, h: MOUSE}
+  - {t: SPACE, h: NAV}
   - BACKSPACE
   - ESCAPE
-  - {t: ENTER, h: SYMB}
-  - {t: DELETE, h: NUM}
+  - {t: ENTER, h: NUM}
+  - {t: DELETE, h: SYMB}
   NUM:
   - ''
   - ''
@@ -127,8 +127,8 @@ layers:
   - SPACE
   - BACKSPACE
   - ESCAPE
-  - ENTER
-  - {t: DELETE, type: held}
+  - {t: ENTER, type: held}
+  - DELETE
   NUM_MC:
   - ''
   - ''
@@ -170,8 +170,8 @@ layers:
   - SPACE
   - BACKSPACE
   - ESCAPE
-  - ENTER
-  - {t: DELETE, type: held}
+  - {t: ENTER, type: held}
+  - DELETE
   NAV:
   - ''
   - Gui+LEFT ARROW
@@ -209,8 +209,8 @@ layers:
   - END
   - Gui+Sft+DOWN ARROW
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - ''
   - ''
   - '&caps_word'
   - ENTER
@@ -252,8 +252,8 @@ layers:
   - END
   - Ctl+Alt+BACKSPACE
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - ''
   - ''
   - '&caps_word'
   - ENTER
@@ -299,8 +299,8 @@ layers:
   - SPACE
   - BACKSPACE
   - {t: ▽, type: trans}
-  - {type: held}
   - {t: ▽, type: trans}
+  - {type: held}
   MOUSE:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -314,7 +314,7 @@ layers:
   - LEFT ALT
   - LEFT GUI
   - BT NXT
-  - {t: ▽, type: trans}
+  - BT CLR
   - '&msc SCRL_RIGHT'
   - '&mkp MB3'
   - '&mkp MB2'
@@ -338,8 +338,8 @@ layers:
   - UP ARROW
   - RIGHT ARROW
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
